@@ -9,7 +9,7 @@
 		$machinecode = str_replace(' ', '-', strtolower($code));
 		$machinecode = str_replace(array(' ',',','.'), '', $machinecode);
 		//echo '<h2>'.$machinecode.'</h2>';
-		$str = file_get_contents(ATI_2024_WIDGET_PATH . '/src/data/results_2022.json');
+		$str = file_get_contents(ATI_2024_WIDGET_PATH . '/src/data/results_2024.json');
 		if($str){
 			$json = json_decode($str, true);
 			//echo '<pre>'.print_r($json,true).'</pre>';
@@ -24,7 +24,7 @@
 
 	function getColours(){
 		$colours = array();
-		$paletteFile = file_get_contents(ATI_2022_WIDGET_PATH . '/src/swatches/palette.js'); // imports palette json
+		$paletteFile = file_get_contents(ATI_2024_WIDGET_PATH . '/src/swatches/palette.js'); // imports palette json
 		$paletteFile = strstr($paletteFile, '[');
 		$paletteFile = str_replace(';','',$paletteFile);
 		//$paletteFile = substr($paletteFile, stripos($paletteFile, '['), -1);
@@ -50,7 +50,7 @@
 	function atiTranslate($string, $lang='en') {
 		global $translations; //caches array we include below
 		//if ($lang === 'en') return $string;
-		include_once ATI_2022_INCLUDES . '/translations.php'; // imports $translations
+		include_once ATI_2024_INCLUDES . '/translations.php'; // imports $translations
 
 		$str = strtolower($string);
 
@@ -65,13 +65,13 @@
 	add_action( 'genesis_before_loop', 'ati_language_switcher', 11 );
 	function ati_language_switcher(){
 		global $prefix, $code, $lang;
-		$prefix = 'ati_donor_meta_2022_';
+		$prefix = 'ati_donor_meta_2024_';
 		$code = get_post_meta( get_the_ID(), $prefix . 'code', true );
-		$lang = get_post_meta( get_the_ID(), 'ati_page_2022_meta_language', true );
+		$lang = get_post_meta( get_the_ID(), 'ati_page_2024_meta_language', true );
 
 		/********/
 		$second_loop = get_posts( array(
-			'post_type' => 'donor_2022',
+			'post_type' => 'donor_2024',
 			'meta_key'   => $prefix . 'code',
 			'meta_value' => $code,
 		) );
@@ -84,7 +84,7 @@
 					$language = $lang;
 				}else{
 					$active = '';
-					$language = get_post_meta( $alts->ID, 'ati_page_2022_meta_language', true );
+					$language = get_post_meta( $alts->ID, 'ati_page_2024_meta_language', true );
 				}
 
 				$output .= '<option class="' . $active . '" value="' .get_permalink($alts->ID).'"' . $active . '>'.atiTranslate('title',$language).'</option>';
@@ -107,16 +107,16 @@
 			$donorColours = $colours[$donorData['performance_group']];
 		}
 
-		$download_id = get_post_meta( get_the_ID(), 'ati_page_2022_meta_pdf_download_id_2022', true );
+		$download_id = get_post_meta( get_the_ID(), 'ati_page_2024_meta_pdf_download_id_2024', true );
 
 		echo '<div class="row donor-content"><div class="col-md-5 donor-graph">';
 		echo '<div class="graph-wrapper position-sticky">';
-		//echo do_shortcode( "[ati-graphs-2022 display=\"graph\" agency=\"{$code}\"]" );
+		//echo do_shortcode( "[ati-graphs-2024 display=\"graph\" agency=\"{$code}\"]" );
 
 		// need to try alternative graph drawing because React App not showing in PDF printing..
 		$machinecode = str_replace(' ', '-', $code);
 		$machinecode = str_replace(array(' ',',','.'), '', $machinecode);
-		echo '<canvas id="donor-graphic" class="img-fluid" width="688" height="516" data-code="'.strtolower($machinecode).'" data-colours="'.$donorColours[2].','.$donorColours[0].'" data-path="'.plugins_url( 'widget/src/data/results_2022.json', dirname(__FILE__) ).'"></canvas>';
+		echo '<canvas id="donor-graphic" class="img-fluid" width="688" height="516" data-code="'.strtolower($machinecode).'" data-colours="'.$donorColours[2].','.$donorColours[0].'" data-path="'.plugins_url( 'widget/src/data/results_2024.json', dirname(__FILE__) ).'"></canvas>';
 
 		if(!empty($download_id)){
 			echo do_shortcode('[download id="'.$download_id.'" template="download-profile-'.$lang.'"]');
@@ -133,7 +133,7 @@
 			echo '<div class="donor-position" style="background-color: ' . $donorColours[1] . ';color:' . $donorColours[4] . ';">'.atiTranslate('Position', $lang).': <span class="year-position">' . $donorData['position'] . '</span></div>';
 		}
 		if ( ! empty( $donorData['performance_group'] ) && !empty($donorColours) ) {
-			echo '<div class="performance-group" style="background-color: ' . $donorColours[0] . ';color:' . $donorColours[4] . ';">2022 <span class="year-category" style="color:' . $donorColours[2] . ';">' . atiTranslate($donorData['performance_group'],$lang) . '</span></div>';
+			echo '<div class="performance-group" style="background-color: ' . $donorColours[0] . ';color:' . $donorColours[4] . ';">2024 <span class="year-category" style="color:' . $donorColours[2] . ';">' . atiTranslate($donorData['performance_group'],$lang) . '</span></div>';
 		}
 		echo '</div>';
 
@@ -177,7 +177,7 @@
 				foreach ($donorData['components'] as $title => $component) {
 					$idHTML = str_replace(array(' ','/','(',')'), '-', strtolower($title));
 					$idString = str_replace(array(' ','/','(',')'), '_', strtolower($title));
-					$idString = $idString . '_2022';
+					$idString = $idString . '_2024';
 					$title = ati_get_component_option( $idString, 'title_'.$lang, $title);
 
 					echo '<div class="component-performance"><a href="#'.$idHTML.'" data-toggle="tab" class="tab-toggler"><span class="label">'.$title.'</span> <span class="score">'.round($component['weighted_score'],1).' / '.$component['out_of'].'</span></a></div>';
@@ -217,7 +217,7 @@
 
 	add_action('genesis_entry_content','deep_dive', 20);
 	function deep_dive(){
-		include_once ATI_2022_INCLUDES . '/components-and-indicators.php'; // imports variable $components_and_indicators
+		include_once ATI_2024_INCLUDES . '/components-and-indicators.php'; // imports variable $components_and_indicators
 		global $lang;
 		$tabs = '';
 		$panels = '';
@@ -232,7 +232,7 @@
 
 			$idHTML = str_replace(array(' ','/','(',')'), '-', strtolower($component['title']));
 			$idString = str_replace(array(' ','/','(',')'), '_', strtolower($component['title']));
-			$idString = $idString . '_2022';
+			$idString = $idString . '_2024';
 
 
 //			if($lang !== 'en'){
@@ -280,7 +280,7 @@
 			foreach ( $component['indicators']  as $row => $indicator ) {
 //				$idString = str_replace(array(' ','/','(',')'), '_', strtolower($component['title']));
 				//echo  $idString;
-				$inString = str_replace(' ', '_', strtolower($indicator)).'_2022';
+				$inString = str_replace(' ', '_', strtolower($indicator)).'_2024';
 				$inData = false;
 				if(!empty($componentData['indicators'][$indicator])){
 					$inData = $componentData['indicators'][$indicator];
@@ -400,7 +400,7 @@
 	 */
 	function insert_html_after_title_area_markup( $close_html, $args ) {
 		if ( $close_html ) {
-			$close_html = $close_html . '<h2 class="pdf-print-only">'.__('Aid Transparency Index 2022' , 'aid-transparency-index-2024') . '</h2>';
+			$close_html = $close_html . '<h2 class="pdf-print-only">'.__('Aid Transparency Index 2024' , 'aid-transparency-index-2024') . '</h2>';
 		}
 		return $close_html;
 	}

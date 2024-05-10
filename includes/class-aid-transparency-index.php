@@ -160,7 +160,7 @@ class Aid_Transparency_Index_2024 {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Aid_Transparency_Index_2022_i18n();
+		$plugin_i18n = new Aid_Transparency_Index_2024_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -175,13 +175,13 @@ class Aid_Transparency_Index_2024 {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Aid_Transparency_Index_2022_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Aid_Transparency_Index_2024_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
-		$this->loader->add_action( 'save_post_donor_2022', $plugin_admin, 'save_donor_pdf' );
-		$this->loader->add_action( 'save_post_donor_2022', $plugin_admin, 'save_donor_thumbnail', 11 );
+		$this->loader->add_action( 'save_post_donor_2024', $plugin_admin, 'save_donor_pdf' );
+		$this->loader->add_action( 'save_post_donor_2024', $plugin_admin, 'save_donor_thumbnail', 11 );
 		//$this->loader->add_action( 'save_post', $plugin_admin, 'save_donor_pdf', 11 );
 	}
 
@@ -194,7 +194,7 @@ class Aid_Transparency_Index_2024 {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Aid_Transparency_Index_2022_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new Aid_Transparency_Index_2024_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -206,8 +206,8 @@ class Aid_Transparency_Index_2024 {
 
 		//$this->loader->add_filter('genesis_breadcrumb_link', $plugin_public, 'ati_donor_breadcrumb_custom', 20, 5);
 
-		// Create a short code for the plugin's user in the form:  [ati-graphs-2022]
-		$this->loader->add_shortcode( 'ati-graphs-2022', $plugin_public, 'ati_graphs_shortcode_2022' );
+		// Create a short code for the plugin's user in the form:  [ati-graphs-2024]
+		$this->loader->add_shortcode( 'ati-graphs-2024', $plugin_public, 'ati_graphs_shortcode_2024' );
 
 	}
 
@@ -235,7 +235,7 @@ class Aid_Transparency_Index_2024 {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Aid_Transparency_Index_2022_Loader    Orchestrates the hooks of the plugin.
+	 * @return    Aid_Transparency_Index_2024_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

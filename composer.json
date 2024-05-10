@@ -4,7 +4,7 @@
     "type": "wordpress-plugin",
     "require": {
         "jjgrainger/posttypes": "dev-master",
-        "php": ">8.*",
+        "php": ">5.2.4",
         "mikehaertl/phpwkhtmltopdf": "dev-master"
     },
     "license": "GPLDL",

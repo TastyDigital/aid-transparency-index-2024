@@ -8,8 +8,8 @@
  * @link       https://tastydigital.com
  * @since      1.0.0
  *
- * @package    Aid_Transparency_Index_2022
- * @subpackage Aid_Transparency_Index_2022/admin/partials
+ * @package    Aid_Transparency_Index_2024
+ * @subpackage Aid_Transparency_Index_2024/admin/partials
  */
 ?>
 

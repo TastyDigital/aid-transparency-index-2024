@@ -18,7 +18,7 @@
 	/**
 	 * Hook in and register a metabox to handle donor options page and adds a menu item.
 	 */
-	function pwyf_ati_register_options_submenu_for_donor_post_type_2022() {
+	function pwyf_ati_register_options_submenu_for_donor_post_type_2024() {
 
 
 
@@ -29,12 +29,12 @@
 		 * Register main donor options args
 		 */
 		$args = array(
-			'id'           => 'pwyf_ati_donor_options_2022_page',
+			'id'           => 'pwyf_ati_donor_options_2024_page',
 			//'menu_title'   => esc_html__( 'Component Info', 'aid-transparency-index-2024' ),
 			'object_types' => array( 'options-page' ),
-			'parent_slug'  => 'edit.php?post_type=donor_2022', // Make options page a submenu item of the themes menu.
-			'tab_group'    => 'pwyf_ati_donor_options_2022',
-			'display_cb'   => 'pwyf_ati_options_display_with_tabs_2022',
+			'parent_slug'  => 'edit.php?post_type=donor_2024', // Make options page a submenu item of the themes menu.
+			'tab_group'    => 'pwyf_ati_donor_options_2024',
+			'display_cb'   => 'pwyf_ati_options_display_with_tabs_2024',
 			// 'icon_url'        => '', // Menu icon. Only applicable if 'parent_slug' is left empty.
 			// 'menu_title'      => esc_html__( 'Options', 'aid-transparency-index-2024' ), // Falls back to 'title' (above).
 			// 'capability'      => 'manage_options', // Cap required to view options-page.
@@ -47,11 +47,11 @@
 		);
 		foreach ( $components_and_indicators as $key => $component ) {
 		    $idString = str_replace(' ', '_', strtolower($component['title']));
-		    $args['id'] = $idString . '_page_2022';
+		    $args['id'] = $idString . '_page_2024';
 //		    if(empty($args['option_key'])){
 //			    $args['option_key'] = 'component-definitions';
 //            }else{
-			    $args['option_key'] = $idString.'_2022';
+			    $args['option_key'] = $idString.'_2024';
           //  }
 			//$args['tab_group']  = $idString;
 			$args['tab_title']  = $component['title'];
@@ -90,7 +90,7 @@
                     'id'   => 'indicators_title_'.$lang,
                 ) );
                 foreach ( $component['indicators'] as $indicator ) {
-                    $inString = str_replace(' ', '_', strtolower($indicator)).'_2022';
+                    $inString = str_replace(' ', '_', strtolower($indicator)).'_2024';
                     $meta_options[$key]->add_field( array(
                         'name'    => $indicator . ' title ('.$language.')',
                         'id'      => $inString.'_title_'.$lang,
@@ -112,7 +112,7 @@
 		}
 
 	}
-	add_action( 'cmb2_admin_init', 'pwyf_ati_register_options_submenu_for_donor_post_type_2022' );
+	add_action( 'cmb2_admin_init', 'pwyf_ati_register_options_submenu_for_donor_post_type_2024' );
 
 	/**
 	 * A CMB2 options-page display callback override which adds tab navigation among
@@ -120,8 +120,8 @@
 	 *
 	 * @param CMB2_Options_Hookup $cmb_options The CMB2_Options_Hookup object.
 	 */
-	function pwyf_ati_options_display_with_tabs_2022( $cmb_options ) {
-		$tabs = pwyf_ati_options_page_tabs_2022( $cmb_options );
+	function pwyf_ati_options_display_with_tabs_2024( $cmb_options ) {
+		$tabs = pwyf_ati_options_page_tabs_2024( $cmb_options );
 		?>
 		<div class="wrap cmb2-options-page option-<?php echo $cmb_options->option_key; ?>">
 			<?php if ( get_admin_page_title() ) : ?>
@@ -149,7 +149,7 @@
 	 *
 	 * @return array Array of tab information.
 	 */
-	function pwyf_ati_options_page_tabs_2022( $cmb_options ) {
+	function pwyf_ati_options_page_tabs_2024( $cmb_options ) {
 		$tab_group = $cmb_options->cmb->prop( 'tab_group' );
 		$tabs      = array();
 
@@ -165,7 +165,7 @@
 	}
 
 	add_action('in_admin_header', function () {
-		if ( !empty($_GET['post_type']) && $_GET['post_type'] !== 'donor_2022') return;
+		if ( !empty($_GET['post_type']) && $_GET['post_type'] !== 'donor_2024') return;
 		remove_all_actions('admin_notices');
 		remove_all_actions('all_admin_notices');
 	}, 1000);

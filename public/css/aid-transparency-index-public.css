@@ -6,44 +6,44 @@
 /* @import url("http://pwyf.local/app/plugins/aid-transparency-index/admin/css/pdf.css"); */
 
 .aid-transparency-index-2024 h1,
-article.type-donor_2022 h1,
+article.type-donor_2024 h1,
 .aid-transparency-index-2024 h2,
-article.type-donor_2022 h2,
+article.type-donor_2024 h2,
 .aid-transparency-index-2024 h3,
-article.type-donor_2022 h3,
+article.type-donor_2024 h3,
 .aid-transparency-index-2024 h4,
-article.type-donor_2022 h4,
+article.type-donor_2024 h4,
 .aid-transparency-index-2024 h5,
-article.type-donor_2022 h5,
+article.type-donor_2024 h5,
 .aid-transparency-index-2024 h6
-article.type-donor_2022 h6 {
+article.type-donor_2024 h6 {
     color: #4d4d4d;
 }
 .aid-transparency-index-2024 .entry-header,
-article.type-donor_2022 .entry-header {
+article.type-donor_2024 .entry-header {
     background-color: #ececec;
     padding: 1.5rem 0.5rem 2rem;
-    background-image: url("ati2022-header-bg@2x.png");
+    background-image: url("ati2024-header-bg@2x.png");
     background-size: cover;
 }
 .aid-transparency-index-2024 .entry-header {
     margin-bottom:2rem;
 }
 .aid-transparency-index-2024 h1.entry-title,
-article.type-donor_2022 h1.entry-title {
+article.type-donor_2024 h1.entry-title {
     font-weight: bold;
     text-align: center;
     margin:0;
 }
 
 .aid-transparency-index-2024 h3,
-article.type-donor_2022 h3 {
+article.type-donor_2024 h3 {
     font-size:1.5rem;
 }
 .aid-transparency-index-2024 b,
 .aid-transparency-index-2024 strong,
-article.type-donor_2022 b,
-article.type-donor_2022 strong{
+article.type-donor_2024 b,
+article.type-donor_2024 strong{
     font-weight:500;
 }
 .aid-transparency-index-2024 .lead {
@@ -53,8 +53,8 @@ article.type-donor_2022 strong{
 .aid-transparency-index-2024 .intro {
 
 }
-article.type-donor_2022 .entry-content ol,
-article.type-donor_2022 .entry-content ul {
+article.type-donor_2024 .entry-content ol,
+article.type-donor_2024 .entry-content ul {
     margin: 1.5rem 0 1.5rem 1.5rem;
 }
 @media only screen and (min-width: 992px) {
@@ -92,21 +92,21 @@ article.type-donor_2022 .entry-content ul {
     }
 }
 
-article.type-donor_2022 h2 {
+article.type-donor_2024 h2 {
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.07142857em;
     color: #4d4d4d;
     margin-bottom: 1rem;
 }
-article.type-donor_2022 .donor-graph {
+article.type-donor_2024 .donor-graph {
     padding-top: 1.25rem;
 }
-article.type-donor_2022 .donor-information {
+article.type-donor_2024 .donor-information {
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
-article.type-donor_2022 .donor-panels .donor-panel {
+article.type-donor_2024 .donor-panels .donor-panel {
     padding-top: 40px;
 }
 .component-scores {

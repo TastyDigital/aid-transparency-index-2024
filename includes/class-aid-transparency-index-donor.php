@@ -64,12 +64,12 @@
 	];
 
 // Create a books Post Type
-	$donors_2024 = new PostType($donor_names_2022, $donor_options_2022, $donor_labels_2022);
+	$donors_2024 = new PostType($donor_names_2024, $donor_options_2024, $donor_labels_2024);
 // Add a Group Taxonomy
-	$donors_2022->taxonomy('country_group_2022');
+	$donors_2024->taxonomy('country_group_2024');
 
 // define the columns to appear on the admin edit screen
-	$donors_2022->columns()->set([
+	$donors_2024->columns()->set([
 		'cb' => '<input type="checkbox" />',
 		'title' => __('Full name on Donor Profile', 'aid-transparency-index-2024'),
 		'donor_code' => __("Donor code", 'aid-transparency-index-2024'),
@@ -82,8 +82,8 @@
 //$stock->columns()->hide(['date', 'author']);
 
 
-	$donors_2022->columns()->populate('language', function($column, $post_id) {
-		$value = get_post_meta( $post_id, 'ati_page_2022_meta_language', true );
+	$donors_2024->columns()->populate('language', function($column, $post_id) {
+		$value = get_post_meta( $post_id, 'ati_page_2024_meta_language', true );
 		if ( is_wp_error( $value ) ) {
 			// something went wrong
 			echo $value->get_error_message();
@@ -92,11 +92,11 @@
 		}
 	});
 
-	$donors_2022->columns()->populate('country', function($column, $post_id) {
+	$donors_2024->columns()->populate('country', function($column, $post_id) {
 		//$post = get_post($post_id);
 		//echo get_the_post_thumbnail($post_id);
 
-		$value = get_the_term_list( $post_id, 'country_group_2022' );
+		$value = get_the_term_list( $post_id, 'country_group_2024' );
 		if ( is_wp_error( $value ) ) {
 			// something went wrong
 			echo $value->get_error_message();
@@ -106,7 +106,7 @@
 		//echo esc_html( $val );
 	});
 
-	$donors_2022->columns()->populate('icon', function($column, $post_id) {
+	$donors_2024->columns()->populate('icon', function($column, $post_id) {
 		//$post = get_post($post_id);
 		//echo get_the_post_thumbnail($post_id);
 
@@ -119,11 +119,11 @@
 		}
 		//echo esc_html( $val );
 	});
-	$donors_2022->columns()->populate('donor_code', function($column, $post_id) {
+	$donors_2024->columns()->populate('donor_code', function($column, $post_id) {
 		//$post = get_post($post_id);
 		//echo get_the_post_thumbnail($post_id);
 
-		$value = get_post_meta( $post_id, 'ati_donor_meta_2022_code', true );
+		$value = get_post_meta( $post_id, 'ati_donor_meta_2024_code', true );
 		if ( is_wp_error( $value ) ) {
 			// something went wrong
 			echo $value->get_error_message();
@@ -134,40 +134,40 @@
 	});
 
 // make sortable
-	$donors_2022->columns()->sortable([
-		'country' => ['country_group_2022', true],
-		'donor_code' => ['ati_donor_meta_2022_code', true],
-		'language' => ['ati_page_2022_meta_language', true]
+	$donors_2024->columns()->sortable([
+		'country' => ['country_group_2024', true],
+		'donor_code' => ['ati_donor_meta_2024_code', true],
+		'language' => ['ati_page_2024_meta_language', true]
 	]);
 
-	$donors_2022->register();
+	$donors_2024->register();
 
 
-	$tcountries_2022 = [
-		'name' => 'country_group_2022',
+	$tcountries_2024 = [
+		'name' => 'country_group_2024',
 		'singular' => 'Country',
 		'plural' => 'Countries',
 		'slug' => 'country'
 	];
 
-	$countries_2022 = new Taxonomy($tcountries_2022);
+	$countries_2024 = new Taxonomy($tcountries_2024);
 
 // Set options for the taxonomy.
-	$countries_2022->options( [
+	$countries_2024->options( [
 		'hierarchical' => true,
 		'show_in_rest' => true
 	] );
 
-	$countries_2022->register();
+	$countries_2024->register();
 
-	function ati_pull_all_donors_2022( $query ) {
-		if ( ! is_admin() && $query->is_main_query() && is_post_type_archive( 'donor_2022' ) ) {
+	function ati_pull_all_donors_2024( $query ) {
+		if ( ! is_admin() && $query->is_main_query() && is_post_type_archive( 'donor_2024' ) ) {
 			// Display 50 posts for a custom post type called 'donor'
 			$query->set( 'posts_per_page', 100 );
 			return;
 		}
 	}
-	add_action( 'pre_get_posts', 'ati_pull_all_donors_2022', 1 );
+	add_action( 'pre_get_posts', 'ati_pull_all_donors_2024', 1 );
 
 
 
@@ -175,14 +175,14 @@
 
 
 
-add_action( 'cmb2_init', 'tasty_register_donor_metabox_2022' );
+add_action( 'cmb2_init', 'tasty_register_donor_metabox_2024' );
 
-	function tasty_register_donor_metabox_2022() {
-		$prefix = 'ati_donor_meta_2022_';
+	function tasty_register_donor_metabox_2024() {
+		$prefix = 'ati_donor_meta_2024_';
 		$donor_meta = new_cmb2_box( array(
 			'id'            => $prefix . 'metabox',
 			'title'         => esc_html__( 'Donor details', 'aid-transparency-index-2024' ),
-			'object_types'  => array( 'donor_2022' ), // Post type
+			'object_types'  => array( 'donor_2024' ), // Post type
 			'priority'   => 'high',
 			'show_in_rest' => WP_REST_Server::READABLE
 		) );
@@ -225,11 +225,11 @@ add_action( 'cmb2_init', 'tasty_register_donor_metabox_2022' );
 
 		/*----*/
 
-		$prefix2 = 'ati_page_2022_meta_';
+		$prefix2 = 'ati_page_2024_meta_';
 		$page_meta = new_cmb2_box( array(
 			'id'            => $prefix2 . 'details',
 			'title'         => esc_html__( 'Page details', 'aid-transparency-index-2024' ),
-			'object_types'  => array( 'donor_2022' ), // Post type
+			'object_types'  => array( 'donor_2024' ), // Post type
 			'priority'   => 'high',
 			'show_in_rest' => WP_REST_Server::READABLE
 		) );
@@ -243,15 +243,15 @@ add_action( 'cmb2_init', 'tasty_register_donor_metabox_2022' );
 		// enabling this requires changing 'save_post_donor' hook to 'save_post' in admin scripts
 //		$page_meta->add_field( array(
 //			'name'    => esc_html__( 'Download Monitor ID', 'aid-transparency-index-2024' ),
-//			'id'      => $prefix2 . 'pdf_download_id_2022',
+//			'id'      => $prefix2 . 'pdf_download_id_2024',
 //			'type'    => 'text_small'
 //		) );
 
 	}
 
-	add_action( "cmb2_after_post_form_ati_page_2022_meta_details", 'add_link_to_datasheet_download_monitor_2022' );
-	function add_link_to_datasheet_download_monitor_2022(){
-		$download_id = get_post_meta( get_the_ID(), 'ati_page_2022_meta_pdf_download_id_2022', true );
+	add_action( "cmb2_after_post_form_ati_page_2024_meta_details", 'add_link_to_datasheet_download_monitor_2024' );
+	function add_link_to_datasheet_download_monitor_2024(){
+		$download_id = get_post_meta( get_the_ID(), 'ati_page_2024_meta_pdf_download_id_2024', true );
 		$download = get_post($download_id );
 		if( $download->post_type === 'dlm_download' && $download->post_status !== 'trash' ){
 			//echo '<p> <a href="'.get_permalink($download_id).'">'.$download->post_title.'</a> </p>';
@@ -260,10 +260,10 @@ add_action( 'cmb2_init', 'tasty_register_donor_metabox_2022' );
 	}
 
 	// updated structured data for translated content
-	add_filter( 'wpseo_schema_piece_language', 'ati_add_language_piece_2022', 11, 1 );
-	add_filter( 'wpseo_og_locale', 'ati_add_language_piece_2022', 11, 1 );
-	function ati_add_language_piece_2022($data){
-		$lang = get_post_meta( get_the_ID(), 'ati_page_2022_meta_language', true );
+	add_filter( 'wpseo_schema_piece_language', 'ati_add_language_piece_2024', 11, 1 );
+	add_filter( 'wpseo_og_locale', 'ati_add_language_piece_2024', 11, 1 );
+	function ati_add_language_piece_2024($data){
+		$lang = get_post_meta( get_the_ID(), 'ati_page_2024_meta_language', true );
 		if(!empty($lang)){
 			return $lang;
 		}

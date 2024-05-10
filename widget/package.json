@@ -5,24 +5,24 @@
   "homepage": "/app/plugins/aid-transparency-index/widget/build",
   "proxy": "https://pwyf.local",
   "devDependencies": {
-    "@babel/cli": "^7.10.1",
-    "@babel/core": "^7.10.2",
-    "@babel/plugin-syntax-jsx": "^7.16.7",
-    "@babel/preset-env": "^7.10.2",
-    "@wordpress/scripts": "^22",
+    "@babel/cli": "^7.24.5",
+    "@babel/core": "^7.24.5",
+    "@babel/plugin-syntax-jsx": "^7.24.1",
+    "@babel/preset-env": "^7.24.5",
+    "@wordpress/scripts": "^27.8.0",
     "ase-util": "^1.0.3",
     "babel-minify": "^0.5.2",
-    "webpack": "^5"
+    "webpack": "^5.91.0"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.10.1",
-    "core-js": "3",
-    "prop-types": "^15.7.2",
-    "react": "17",
+    "@babel/polyfill": "^7.12.1",
+    "core-js": "3.37.0",
+    "prop-types": "^15.8.1",
+    "react": "18.3.1",
     "react-async": "^10.0.1",
-    "react-component-export-image": "^0.1.6",
-    "react-dom": "17",
-    "react-tooltip": "^4.2.6"
+    "react-component-export-image": "^0.1.9",
+    "react-dom": "18.3.1",
+    "react-tooltip": "^4.5.1"
   },
   "scripts": {
     "build": "wp-scripts build",

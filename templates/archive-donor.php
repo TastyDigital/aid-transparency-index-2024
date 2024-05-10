@@ -24,7 +24,7 @@
 			),
 			'date_query' => array(
 				array(
-					'year'  => 2022
+					'year'  => 2024
 				),
 			),
 		);
@@ -36,7 +36,7 @@
 				if( has_term( 'index-scores', 'dlm_download_tag', $d->ID) ) {
 					$score_downloads .= '<div class="col-auto">'.do_shortcode('[download id="'.$d->ID.'" template="descriptive-button"]') .'</div>';
 				}
-				if( has_term( '2022-ati-report', 'dlm_download_tag', $d->ID) ) {
+				if( has_term( '2024-ati-report', 'dlm_download_tag', $d->ID) ) {
 					$report_downloads .= '<div class="col-auto">'.do_shortcode('[download id="'.$d->ID.'" template="descriptive-button"]') .'</div>';
 				}
 				//echo '<pre>'.print_r($d, true).'</pre>';
@@ -56,7 +56,7 @@
 			[
 				'open'    => '<h1 %s>',
 				'close'   => '</h1>',
-				'content' => apply_filters( 'Aid_Transparency_Index_2022_title', __( 'Aid Transparency Index <span class="year-published"><span>#2022Index</span></span>', 'aid-transparency-index-2024' ) ),
+				'content' => apply_filters( 'Aid_Transparency_Index_2024_title', __( 'Aid Transparency Index <span class="year-published"><span>#2024Index</span></span>', 'aid-transparency-index-2024' ) ),
 				'context' => 'entry-title',
 			]
 		);
@@ -78,7 +78,7 @@
 		echo '<!-- <p>'.__('Double click on the chart below to read more about the performance of each agency.', 'aid-transparency-index-2024').'</p> -->';
 		echo '</div>';
 
-		echo do_shortcode('[ati-graphs-2022 display="barchart" ]');
+		echo do_shortcode('[ati-graphs-2024 display="barchart" ]');
 
 
 		if( ! empty( $score_downloads ) ) {
@@ -86,7 +86,7 @@
 		}
 		//echo do_shortcode('[download id="13376" template="descriptive-button"]');
 
-		echo do_shortcode('[ati-graphs-2022 display="table" ]');
+		echo do_shortcode('[ati-graphs-2024 display="table" ]');
 
 
 		if ( have_posts() ) {

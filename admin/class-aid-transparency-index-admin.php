@@ -102,7 +102,7 @@ class Aid_Transparency_Index_2024_Admin {
 	}
 	private function getDonorFilename($post_id) {
 
-		$code = get_post_meta( $post_id, 'ati_donor_meta_2022_code', true );
+		$code = get_post_meta( $post_id, 'ati_donor_meta_2024_code', true );
 		$code = str_replace(' ', '-', strtolower($code));
 		$code = str_replace(array(',','*','(',')','/','.'), '', $code);
 		return $code;
@@ -138,12 +138,12 @@ class Aid_Transparency_Index_2024_Admin {
 		// Donor post has been saved
 		// lets create or update existing PDF and attach it to posts and download monitor
 		$donor = get_post($post_id);
-		if($donor->post_status === 'publish' && $donor->post_type === 'donor_2022'){
+		if($donor->post_status === 'publish' && $donor->post_type === 'donor_2024'){
 			// cmb2 field for download.
 			//$pdf = new Pdf(get_permalink($post_id));
 			$code = $this->getDonorFilename( $post_id );
-			$lang = get_post_meta( $post_id, 'ati_page_2022_meta_language', true );
-			$year = 2022;
+			$lang = get_post_meta( $post_id, 'ati_page_2024_meta_language', true );
+			$year = 2024;
 
 
 			// $filename = $code.'_'.$post_id.'_'.$version . '_' . $lang .'.pdf';
@@ -200,7 +200,7 @@ class Aid_Transparency_Index_2024_Admin {
 
 				try {
 
-					$prev_download_id = get_post_meta( $post_id, 'ati_page_2022_meta_pdf_download_id_'.$year, true );
+					$prev_download_id = get_post_meta( $post_id, 'ati_page_2024_meta_pdf_download_id_'.$year, true );
 
 					//write_log('$prev_download_id: ' . $prev_download_id);
 
@@ -242,8 +242,8 @@ class Aid_Transparency_Index_2024_Admin {
 						$download_id = $download->get_id();
 						//write_log('$download_id: '.$download_id);
 						if( $prev_download_id !== $download_id ) {
-							//write_log('UPDATING ati_page_2022_meta_pdf_download_id_2022 meta: '. $post_id . ' ati_page_2022_meta_pdf_download_id_' . $year . ' ' . $download_id . ' ' . $prev_download_id);
-							update_post_meta( $post_id, 'ati_page_2022_meta_pdf_download_id_' . $year, $download_id );
+							//write_log('UPDATING ati_page_2024_meta_pdf_download_id_2024 meta: '. $post_id . ' ati_page_2024_meta_pdf_download_id_' . $year . ' ' . $download_id . ' ' . $prev_download_id);
+							update_post_meta( $post_id, 'ati_page_2024_meta_pdf_download_id_' . $year, $download_id );
 						}
 
 						$versions = $download->get_versions();
@@ -333,7 +333,7 @@ class Aid_Transparency_Index_2024_Admin {
 	public function save_donor_thumbnail($post_id) {
 		// only run if no thumbnail assigned
 		if ( ! has_post_thumbnail($post_id) ) {
-			$year = 2022;
+			$year = 2024;
 			// no featured image, see if we can attache one.
 			$code = $this->getDonorFilename( $post_id );
 			$imgName = $code.'.png';
@@ -347,7 +347,7 @@ class Aid_Transparency_Index_2024_Admin {
 
 
 
-				$donorcode = get_post_meta( get_the_ID(), 'ati_donor_meta_2022_code', true );
+				$donorcode = get_post_meta( get_the_ID(), 'ati_donor_meta_2024_code', true );
 				$machinecode = str_replace(' ', '-', strtolower($donorcode));
 				$machinecode = str_replace(array(' ',',','.'), '', $machinecode);
 				$imgpage = plugin_dir_url( __FILE__ ) . 'partials/donor-graph-image.php?code='.urlencode($machinecode);

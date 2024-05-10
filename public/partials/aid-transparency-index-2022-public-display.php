@@ -8,8 +8,8 @@
  * @link       https://tastydigital.com
  * @since      1.0.0
  *
- * @package    Aid_Transparency_Index_2022
- * @subpackage Aid_Transparency_Index_2022/public/partials
+ * @package    Aid_Transparency_Index_2024
+ * @subpackage Aid_Transparency_Index_2024/public/partials
  */
 	$default_atts = array(
 		'display' => 'barchart',
@@ -21,7 +21,7 @@
 	);
 //	$current_user = wp_get_current_user();
 //	$display_name = !empty($current_user->display_name) ? $current_user->display_name : 'World';
-	$args = shortcode_atts( $default_atts, $atts, 'ati-graphs-2022' );
+	$args = shortcode_atts( $default_atts, $atts, 'ati-graphs-2024' );
 	$uniqid = uniqid('id');
 ?>
 <script>
