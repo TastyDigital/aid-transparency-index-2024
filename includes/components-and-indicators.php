@@ -1,8 +1,12 @@
 <?php
     /* 
-        Tasty Digital April 2024
+        Tasty Digital updates required May 2024
+	    There is one new indicator: “Networked Data - Transactions with valid receiver”.
+		One indicator name has changed  - from ‘sub-national location’ to ‘location’.
+
         We use this to set up the wp options forms. 
         Relates to keys in the results.json ATI dataset.
+
     */
     
     $components_and_indicators = [
@@ -41,7 +45,7 @@
 	            'Current status',
 	            'Contact details',
 	            'Sectors',
-	            'Sub-national location',
+	            'Location',
 	            'Conditions',
                 'Unique ID' 
             ]
@@ -55,6 +59,7 @@
 	            'Tied aid status',
 	            'Networked Data - Implementors',
 	            'Networked Data - Participating Orgs',
+	            'Networked Data - Transactions with valid receiver',
 	            'Project procurement'
             ]
         ],

@@ -253,7 +253,7 @@ add_action( 'cmb2_init', 'tasty_register_donor_metabox_2024' );
 	function add_link_to_datasheet_download_monitor_2024(){
 		$download_id = get_post_meta( get_the_ID(), 'ati_page_2024_meta_pdf_download_id_2024', true );
 		$download = get_post($download_id );
-		if( $download->post_type === 'dlm_download' && $download->post_status !== 'trash' ){
+		if( !empty($download) && $download->post_type === 'dlm_download' && $download->post_status !== 'trash' ){
 			//echo '<p> <a href="'.get_permalink($download_id).'">'.$download->post_title.'</a> </p>';
 			edit_post_link($download->post_title, __('Associated datasheet download: ','aid-transparency-index-2024'), '', $download_id);
 		}
