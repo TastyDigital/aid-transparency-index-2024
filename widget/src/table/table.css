@@ -1,0 +1,99 @@
+caption {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    color: #4d4d4d;
+    font-weight: bold;
+    text-align: center;
+    caption-side: top;
+}
+table {
+    border-spacing: 0
+}
+th button {
+    width: 100%;
+    text-align: left;
+    font-size: 0.75rem;
+   /* border:none; */
+    padding-left: 0;
+    min-height: 40px;
+}
+td {
+    font-size: 0.75rem;
+    padding: 9px 12px;
+}
+td.category-cell,
+td.score-cell{
+    padding: 5px 4px;
+}
+.group-badge {
+    color:#FFFFFF;
+    padding: 4px 8px;
+    text-align: center;
+    white-space: nowrap;
+}
+.score-bar {
+    height:24px;
+    width:100%;
+    position: relative;
+}
+.score-bar .fill {
+    position: absolute;
+    height: 24px;
+    top:0;
+}
+th.sorter {
+    background-color: #EEEEEE;
+    border: 1px solid #CCCCCC;
+    border-left-width: 0;
+    padding: 0;
+}
+th.sorter.ascending,
+th.sorter.descending {
+    background-color: #CCECF4;
+}
+th.sorter:first-of-type {
+    border-left-width: 1px;
+}
+th.sorter button {
+    position: relative;
+    padding-right: 24px;
+    border: none;
+    background-color: transparent;
+}
+th.sorter button:after {
+    content: ' ';
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position:absolute;
+    right:12px;
+    top:50%;
+    transform: translateY(-2px);
+}
+th.sorter.ascending button:after {
+    border-bottom: 5px solid currentColor;
+}
+
+th.sorter.descending button:after {
+    border-top: 5px solid currentColor;
+}
+tr.clickable-row {
+    cursor: pointer;
+
+}
+tr.clickable-row:hover {
+    background-color: #EEEEEE;
+}
+th {
+    height: 100%;
+}
+tbody:before {
+    content:"@";
+    display:block;
+    line-height:10px;
+    text-indent:-99999px;
+}
+td.centered {
+    text-align: center;
+}

@@ -1,0 +1,19 @@
+body {
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+}
+.App {
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  max-width: 1408px;
+}
+
+.App .App__Message {
+  font-size: 15px;
+  line-height: 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 100%;
+}

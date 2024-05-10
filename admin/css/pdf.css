@@ -1,0 +1,233 @@
+#cookie,
+.site-header .header-widget-area,
+.site-header .nav-primary,
+.site-header .toggle-header-search,
+.site-header .slicknav_menu,
+.breadcrumb,
+.nav-secondary,
+.tasty-social-icons,
+.single-donor .language-selector,
+.btn.ati-btn,
+.et_social_inline,
+.et_social_sidebar_networks {
+    display:none !important;
+}
+.graph-wrapper {
+    display: block !important;
+}
+h1.entry-title {
+    font-size: 14pt !important;
+}
+/*
+
+.donor-graph,
+.donor-information {
+    display: block !important;
+    margin: 0 !important;
+}
+*/
+body {
+    font-weight:300 !important;
+    font-size: 9pt !important;
+    padding: 0.5cm 1cm;
+}
+.row {
+    -webkit-display: -webkit-box;
+  -webkit-display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+}
+.row > div {
+  display: inline-block;
+}
+.donor-components,
+.donor-conclusion,
+.component-info,
+.indicator-scores {
+    display: inline-block;
+    vertical-align: top;
+}
+span.year-category {
+    display: block;
+}
+.donor-graph canvas {
+    width:8cm !important;
+    height:6cm !important;
+}
+
+.donor-components {
+    width: 25% !important;
+    display: inline-block;
+}
+.donor-conclusion {
+    width: 75% !important;
+    display: inline-block;
+}
+
+.component-info,
+.indicator-scores {
+    width:50% !important;
+}
+.component-info {
+    display: inline-block;
+    padding-left: 0 !important;
+}
+.indicator-scores {
+    display: inline-block;
+    padding-right: 0 !important;
+}
+.deep-dive.wrap {
+    padding: 0 !important;
+}
+#deep-dive {
+    background-color: white !important;
+}
+#deep-dive .deep-dive .tab-content>.tab-pane {
+    border-width:0  !important;
+    border-color: transparent !important;
+    border-bottom:1px solid #ececec !important;
+    padding-top: 0 !important;
+    padding-bottom: 2cm !important;
+}
+.donor-performance,
+.donor-result.donor-panel {
+    display: table;
+    width:100%;
+}
+.performance-history {
+    display: table-row;
+}
+.donor-performance > div {
+    width: 33% !important;
+    display: table-cell;
+}
+.donor-performance span {
+    display: block !important;
+}
+.performance-history > div {
+    display: table-cell;
+}
+
+
+.top-group h4 {
+    font-size: 9pt !important;
+    width: 80% !important;
+    margin: 0 !important;
+    display: inline-block !important;
+}
+.top-group .weighted-score {
+    font-size: 7pt !important;
+    display: inline-block !important;
+    width: 20% !important;
+    padding: 0 0 0 0.5cm !important;
+    margin: 0 !important;
+    text-align: right !important;
+}
+.top-group .modal-definition {
+    display: none !important;
+}
+.indicator-score {
+    page-break-inside: avoid !important;
+
+}
+.indicator-score .indicator-row {
+    position: relative;
+    height:12pt;
+    padding: 0 !important;
+    display: none !important;
+}
+.indicator-row .format {
+    text-align: right;
+    display: block !important;
+    width:100% !important;
+}
+.indicator-row .format,
+.indicator-row .status {
+    font-size: 7pt !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.indicator-row .status {
+    position: absolute;
+    left:0;
+}
+
+article.type-donor .entry-header {
+    padding: 1.5rem;
+}
+.row > div.col-md-5.donor-graph {
+    display: block;
+    position: absolute !important;
+    left: 0;
+    top:0;
+    width: 48%;
+    padding-right: 0;
+}
+
+.row.donor-content {
+    position:relative !important;
+    top:0 !important;
+}
+.row.donor-content > .col-md-7.donor-information > .donor-overview {
+    margin-left: 50%;
+    width:50% !important;
+}
+article.type-donor .row.donor-content > .col-md-7.donor-information {
+    padding-top: 1.25rem;
+    position: relative;
+    top: 0;
+}
+.svg-img {
+    display: none !important;
+}
+.altbitmap {
+    display: block !important;
+}
+.donor-panel > .component-performance .score {
+    float: none !important;
+}
+.donor-panel > .component-performance > a > span {
+    display: block !important;
+}
+
+/* Page Breaks */
+
+/***Always insert a page break before the element***/
+.pb_before {
+    page-break-before: always !important;
+}
+
+/***Always insert a page break after the element***/
+.pb_after {
+    page-break-after: always !important;
+}
+
+/***Avoid page break before the element (if possible)***/
+.pb_before_avoid {
+    page-break-before: avoid !important;
+}
+
+/***Avoid page break after the element (if possible)***/
+.pb_after_avoid {
+    page-break-after: avoid !important;
+}
+
+/* Avoid page break inside the element (if possible) */
+.pbi_avoid,
+p {
+    page-break-inside: avoid !important;
+}
+
+.pdf-print-only {
+    display: block !important;
+    position: absolute;
+    right: 16px;
+    top: 50px;
+}
+h2.pdf-print-only {
+    font-weight: 500;
+}
+
+/* wkhtmltopdf --user-style-sheet pdf.css --javascript-delay 500 http://pwyf.local/the-index/2020/netherlands-ministry-of-foreign-affairs-mfa/ pdf.pdf */

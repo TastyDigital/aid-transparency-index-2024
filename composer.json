@@ -1,0 +1,15 @@
+{
+    "name": "tastydigital/aid-transparency-index",
+    "description": "Adding Aid Transparency Index donors to Wordpress",
+    "type": "wordpress-plugin",
+    "require": {
+        "jjgrainger/posttypes": "dev-master",
+        "php": ">8.*",
+        "mikehaertl/phpwkhtmltopdf": "dev-master"
+    },
+    "license": "GPLDL",
+    "minimum-stability": "dev",
+    "suggest": {
+        "composer/installers": "~1.0"
+    }
+}
