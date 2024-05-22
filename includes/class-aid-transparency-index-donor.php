@@ -44,10 +44,10 @@
 //		return $redirect_url;
 //	}
 	$donor_options_2024 = [
-        'rewrite' => array( 'slug' => 'the-index/2024' ),
-        'has_archive' => 'the-index/2024',
-//		'rewrite' => array( 'slug' => 'temp-index-url/2024' ),
-//		'has_archive' => 'temp-index-url/2024',
+        // 'rewrite' => array( 'slug' => 'the-index/2024' ),
+        // 'has_archive' => 'the-index/2024',
+		'rewrite' => array( 'slug' => 'temp-index-url/2024' ),
+		'has_archive' => 'temp-index-url/2024',
 		'menu_position' => 20,
 		'menu_icon' => 'dashicons-money',
 		'supports' => array('title', 'editor', 'revisions', 'thumbnail'),
