@@ -1,5 +1,5 @@
 {
-    "name": "tastydigital/aid-transparency-index",
+    "name": "tastydigital/aid-transparency-index-2024",
     "description": "Adding Aid Transparency Index donors to Wordpress",
     "type": "wordpress-plugin",
     "require": {
@@ -11,5 +11,10 @@
     "minimum-stability": "dev",
     "suggest": {
         "composer/installers": "~1.0"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4"
+        }
     }
 }
