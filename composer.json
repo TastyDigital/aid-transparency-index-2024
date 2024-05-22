@@ -3,8 +3,8 @@
     "description": "Adding Aid Transparency Index donors to Wordpress",
     "type": "wordpress-plugin",
     "require": {
-        "jjgrainger/posttypes": "dev-master",
-        "php": ">5.2.4",
+        "jjgrainger/posttypes": "^2.2",
+        "php": ">7.2",
         "mikehaertl/phpwkhtmltopdf": "dev-master"
     },
     "license": "GPLDL",

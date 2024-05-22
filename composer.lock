@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0626a89c2936c320d18f1816da1a87f2",
+    "content-hash": "997f18c8b496d29976d3f75e1b5efa74",
     "packages": [
         {
             "name": "jjgrainger/posttypes",
-            "version": "dev-master",
+            "version": "v2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jjgrainger/PostTypes.git",
@@ -27,7 +27,6 @@
                 "phpunit/phpunit": "8.*",
                 "squizlabs/php_codesniffer": "3.*"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -203,14 +202,16 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "jjgrainger/posttypes": 20,
         "mikehaertl/phpwkhtmltopdf": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">5.2.4"
+        "php": ">7.2"
     },
     "platform-dev": [],
+    "platform-overrides": {
+        "php": "7.4"
+    },
     "plugin-api-version": "2.3.0"
 }
