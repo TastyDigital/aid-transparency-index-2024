@@ -9,7 +9,7 @@
 		$machinecode = str_replace(' ', '-', strtolower($code));
 		$machinecode = str_replace(array(' ',',','.'), '', $machinecode);
 		//echo '<h2>'.$machinecode.'</h2>';
-		$str = file_get_contents(ATI_2024_WIDGET_PATH . '/src/data/results_2024.json');
+		$str = file_get_contents(ATI_2024_WIDGET_PATH . '/src/data/results_2022.json');
 		if($str){
 			$json = json_decode($str, true);
 			//echo '<pre>'.print_r($json,true).'</pre>';
