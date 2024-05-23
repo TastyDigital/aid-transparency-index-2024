@@ -180,7 +180,7 @@ class Aid_Transparency_Index_2024 {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
-		$this->loader->add_action( 'save_post_donor_2024', $plugin_admin, 'save_donor_pdf' );
+		//$this->loader->add_action( 'save_post_donor_2024', $plugin_admin, 'save_donor_pdf' );
 		$this->loader->add_action( 'save_post_donor_2024', $plugin_admin, 'save_donor_thumbnail', 11 );
 		//$this->loader->add_action( 'save_post', $plugin_admin, 'save_donor_pdf', 11 );
 	}

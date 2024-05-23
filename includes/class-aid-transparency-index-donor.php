@@ -249,7 +249,7 @@ add_action( 'cmb2_init', 'tasty_register_donor_metabox_2024' );
 
 	}
 
-	add_action( "cmb2_after_post_form_ati_page_2024_meta_details", 'add_link_to_datasheet_download_monitor_2024' );
+	//add_action( "cmb2_after_post_form_ati_page_2024_meta_details", 'add_link_to_datasheet_download_monitor_2024' );
 	function add_link_to_datasheet_download_monitor_2024(){
 		$download_id = get_post_meta( get_the_ID(), 'ati_page_2024_meta_pdf_download_id_2024', true );
 		$download = get_post($download_id );

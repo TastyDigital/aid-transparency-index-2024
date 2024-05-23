@@ -90,14 +90,14 @@
 
 
 		if ( have_posts() ) {
-			echo '<noscript>
+			echo '<!-- noscript -->
 			<p style="margin-top:2rem">Javascript must be enabled to view interactive graphs and tables. You can still view datasheets and analysis via the links below</p>';
 			while ( have_posts() ) {
 				the_post();
 				genesis_do_post_title();
 
 			}
-			echo '</noscript>';
+			echo '<!-- /noscript -->';
 		}
 
 

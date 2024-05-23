@@ -107,7 +107,7 @@
 			$donorColours = $colours[$donorData['performance_group']];
 		}
 
-		$download_id = get_post_meta( get_the_ID(), 'ati_page_2024_meta_pdf_download_id_2024', true );
+		//$download_id = get_post_meta( get_the_ID(), 'ati_page_2024_meta_pdf_download_id_2024', true );
 
 		echo '<div class="row donor-content"><div class="col-md-5 donor-graph">';
 		echo '<div class="graph-wrapper position-sticky">';
@@ -116,11 +116,11 @@
 		// need to try alternative graph drawing because React App not showing in PDF printing..
 		$machinecode = str_replace(' ', '-', $code);
 		$machinecode = str_replace(array(' ',',','.'), '', $machinecode);
-		echo '<canvas id="donor-graphic" class="img-fluid" width="688" height="516" data-code="'.strtolower($machinecode).'" data-colours="'.$donorColours[2].','.$donorColours[0].'" data-path="'.plugins_url( 'widget/src/data/results_2024.json', dirname(__FILE__) ).'"></canvas>';
+		echo '<canvas id="donor-graphic" class="img-fluid" width="688" height="516" data-code="'.strtolower($machinecode).'" data-colours="'.$donorColours[2].','.$donorColours[0].'" data-path="'.plugins_url( 'widget/src/data/results_2022.json', dirname(__FILE__) ).'"></canvas>';
 
-		if(!empty($download_id)){
-			echo do_shortcode('[download id="'.$download_id.'" template="download-profile-'.$lang.'"]');
-		}
+//		if(!empty($download_id)){
+//			echo do_shortcode('[download id="'.$download_id.'" template="download-profile-'.$lang.'"]');
+//		}
 
 
 		echo '</div></div><div class="col-md-7 donor-information">';
