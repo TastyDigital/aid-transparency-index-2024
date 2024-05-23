@@ -200,16 +200,16 @@ add_action( 'cmb2_init', 'tasty_register_donor_metabox_2024' );
 			'type'       => 'textarea_small'
 		) );
 
-		$donor_meta->add_field( array(
-			'name'    => esc_html__( 'Analysis', 'aid-transparency-index-2024' ),
-			'id'      => $prefix . 'analysis',
-			'type'    => 'wysiwyg',
-			'options' => array(
-				'wpautop' => true, // use wpautop?
-				'media_buttons' => false, // show insert/upload button(s)
-				'teeny' => true, // output the minimal editor config used in Press This
-			),
-		) );
+//		$donor_meta->add_field( array(
+//			'name'    => esc_html__( 'Analysis', 'aid-transparency-index-2024' ),
+//			'id'      => $prefix . 'analysis',
+//			'type'    => 'wysiwyg',
+//			'options' => array(
+//				'wpautop' => true, // use wpautop?
+//				'media_buttons' => false, // show insert/upload button(s)
+//				'teeny' => true, // output the minimal editor config used in Press This
+//			),
+//		) );
 
 		$donor_meta->add_field( array(
 			'name'    => esc_html__( 'Recommendations', 'aid-transparency-index-2024' ),

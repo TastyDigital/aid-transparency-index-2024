@@ -147,7 +147,7 @@
 
 
 		$footnote = get_post_meta( get_the_ID(), $prefix . 'footnote', true );
-		$analysis = get_post_meta( get_the_ID(), $prefix . 'analysis', true );
+		// $analysis = get_post_meta( get_the_ID(), $prefix . 'analysis', true );
 		$recommendations = get_post_meta( get_the_ID(), $prefix . 'recommendations', true );
 
 		echo '</div><!-- /.donor-overview -->';
@@ -188,12 +188,12 @@
 
 		echo '<div class="donor-conclusion col-sm-9">';
 
-		if($analysis !== ''){
-			echo '<div class="donor-analysis donor-panel">';
-			echo '<h2>'.atiTranslate('Analysis',$lang).'</h2>';
-			echo wpautop($analysis);
-			echo '</div>';
-		}
+//		if($analysis !== ''){
+//			echo '<div class="donor-analysis donor-panel">';
+//			echo '<h2>'.atiTranslate('Analysis',$lang).'</h2>';
+//			echo wpautop($analysis);
+//			echo '</div>';
+//		}
 
 		if($recommendations !== ''){
 			echo '<div class="donor-recommendations donor-panel">';
