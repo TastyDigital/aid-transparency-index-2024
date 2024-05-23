@@ -23,7 +23,7 @@ article.type-donor_2024 h6 {
 article.type-donor_2024 .entry-header {
     background-color: #ececec;
     padding: 1.5rem 0.5rem 2rem;
-    background-image: url("ati2024-header-bg@2x.png");
+    /* background-image: url("ati2024-header-bg@2x.png"); */
     background-size: cover;
 }
 .aid-transparency-index-2024 .entry-header {
