@@ -1,7 +1,5 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-//import ReactDOM from 'react-dom';
-const ReactDOM = wp.element;
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import App from './App';
