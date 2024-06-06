@@ -49,7 +49,7 @@ def slugify(name):
 
 rootpath = join(dirname(realpath(__file__)), '..')
 
-with open(join(rootpath, '_data', 'Index_scores_2022.csv')) as f:
+with open(join(rootpath, '_data', 'results_2024.csv')) as f:
     r = csv.DictReader(f)
     results = [x for x in r]
 
@@ -58,18 +58,18 @@ results = sorted(
     key=lambda x: (x['organisation_code'], x['indicator_order'])
 )
 
-orgs = {slugify(x['organisation_name']): {
+orgs = {slugify(x['organisation_name_code']): {
     'score': 0.,
-    'name': x['organisation_name'].replace(', ', '-'),
+    'name': x['organisation_name_code'].replace(', ', '-'),
     'components': OrderedDict(),
 } for x in results}
 
-with open(join(rootpath, '_data', 'past-results_2022.csv')) as f:
+with open(join(rootpath, '_data', 'past-results_2024.csv')) as f:
     r = csv.DictReader(f)
     past_results = [x for x in r]
 
 for past_result in past_results:
-    slug = slugify(past_result['publisher'])
+    slug = slugify(past_result['organisation_name_code'])
     org = orgs.get(slug)
     if org:
         if 'history' not in org:
@@ -88,12 +88,12 @@ for x in results:
     #if x['survey_workflow_name'] not in ['', 'pwyffinal']:
     #    continue
     sources = url_re.findall(x['survey_source'])
-    org = slugify(x['organisation_name'])
+    org = slugify(x['organisation_name_code'])
     sc = float(x['total_points'])
     try:
         weight = float(x['indicator_weight'])
     except ValueError:
-        print("Error with indicator_weight on row",x['organisation_name'],"; value set to 0.0:",x['indicator_weight'])
+        print("Error with indicator_weight on row",x['organisation_name_code'],"; value set to 0.0:",x['indicator_weight'])
         weight = 0.0
     weighted_sc = float(x['indicator_total_weighted_points'])
     fmt = x['publication_format']
@@ -159,7 +159,7 @@ orgs = OrderedDict(
 for idx, org in enumerate(orgs.values()):
     org['rank'] = idx + 1
 
-with open(join(rootpath, '_data', 'results_2022.json'), 'w') as f:
+with open(join(rootpath, '_data', 'results_2024.json'), 'w') as f:
     json.dump(orgs, f, indent=4)
 
 # spreadsheet_url = 'https://docs.google.com/spreadsheets/' + \

@@ -1,4 +1,4 @@
-import Results from './results_2022.json';
+import Results from './results_2024.json';
 //console.log('Results', Results);
 const data = [];
 //const groups = [];

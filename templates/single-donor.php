@@ -9,7 +9,7 @@
 		$machinecode = str_replace(' ', '-', strtolower($code));
 		$machinecode = str_replace(array(' ',',','.'), '', $machinecode);
 		//echo '<h2>'.$machinecode.'</h2>';
-		$str = file_get_contents(ATI_2024_WIDGET_PATH . '/src/data/results_2022.json');
+		$str = file_get_contents(ATI_2024_WIDGET_PATH . '/src/data/results_2024.json');
 		if($str){
 			$json = json_decode($str, true);
 			//echo '<pre>'.print_r($json,true).'</pre>';
@@ -116,7 +116,7 @@
 		// need to try alternative graph drawing because React App not showing in PDF printing..
 		$machinecode = str_replace(' ', '-', $code);
 		$machinecode = str_replace(array(' ',',','.'), '', $machinecode);
-		echo '<canvas id="donor-graphic" class="img-fluid" width="688" height="516" data-code="'.strtolower($machinecode).'" data-colours="'.$donorColours[2].','.$donorColours[0].'" data-path="'.plugins_url( 'widget/src/data/results_2022.json', dirname(__FILE__) ).'"></canvas>';
+		echo '<canvas id="donor-graphic" class="img-fluid" width="688" height="516" data-code="'.strtolower($machinecode).'" data-colours="'.$donorColours[2].','.$donorColours[0].'" data-path="'.plugins_url( 'widget/src/data/results_2024.json', dirname(__FILE__) ).'"></canvas>';
 
 //		if(!empty($download_id)){
 //			echo do_shortcode('[download id="'.$download_id.'" template="download-profile-'.$lang.'"]');
@@ -162,9 +162,11 @@
 			echo '<div class="donor-result donor-panel">';
 
 			if ( ! empty( $donorData['history'] ) ) {
+				//echo '<pre>'.print_r($donorData['history'],true).'</pre>';
 				echo '<div class="performance-history">';
 				foreach ( $donorData['history'] as $value ) {
-					echo '<div class="performance-year performance-year-' . $value['year'] . '" style="background-color: ' . $colours[ $value['performance_group'] ][0] . ';color: ' . $colours[ $value['performance_group'] ][4] . '">' . $value['year'] . ' <span class="year-category" style="color: ' . $colours[ $value['performance_group'] ][2] . '">' . atiTranslate($value['performance_group'],$lang) . '</span></div>';
+					$perf_group = ucfirst(strtolower($value['performance_group'])); // bad data in..
+					echo '<div class="performance-year performance-year-' . $value['year'] . '" style="background-color: ' . $colours[ $perf_group ][0] . ';color: ' . $colours[ $perf_group ][4] . '">' . $value['year'] . ' <span class="year-category" style="color: ' . $colours[ $perf_group ][2] . '">' . atiTranslate($perf_group,$lang) . '</span></div>';
 				}
 				echo '</div>';
 			}
@@ -337,7 +339,7 @@
 							if(!empty($inData['status'][$k])){
 								$status = '<div class="status">'.$publication_status  .": <span>" .$inData['status'][$k] . "</span></div>";
 							}
-							if(!empty($inData['format'][$k])) {
+							if(!empty($inData['format'][$k]) && !empty($inData['sources'])) {
 								$sources = '';
 								foreach ( $inData['sources'][ $k ] as $num => $source ) {
 									$sources .= '<span><a target="_blank" href="' . $source . '"> [' . ( $num + 1 ) . ']</a></span>';
@@ -353,7 +355,7 @@
 						if(!empty($inData['status'])) {
 							$status = '<div class="status">'.$publication_status . ": <span>" . $inData['status'] . "</span></div>";
 						}
-						if(!empty($inData['format'])) {
+						if(!empty($inData['format']) && !empty($inData['sources'])) {
 							$sources = '';
 							foreach ( $inData['sources'] as $num => $source ) {
 								$sources .= '<span><a target="_blank" href="' . $source . '"> [' . ( $num + 1 ) . ']</a></span>';

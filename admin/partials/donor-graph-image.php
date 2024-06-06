@@ -7,7 +7,7 @@
 		if(!empty($code)) {
 
 			$donorData = array();
-			$str = file_get_contents('../../widget/src/data/results_2022.json');
+			$str = file_get_contents('../../widget/src/data/results_2024.json');
 			if($str){
 				$json = json_decode($str, true);
 				if(!empty($json[$code])){
@@ -65,11 +65,11 @@
 						}
 					}
 				}
-				$donorColours = $colours[$donorData['performance_group']];
+				$donorColours = $colours[ucfirst(strtolower($donorData['performance_group']))];
 				write_log($donorColours);
 				do_action( 'wp_head' );
-				write_log(plugins_url( 'widget/src/data/results_2022.json', dirname(__DIR__)  ));
-				echo '<canvas id="donor-graphic" width="1200" height="900" data-code="'.strtolower($code).'" data-colours="'.$donorColours[2].','.$donorColours[0].'" data-path="'.plugins_url( 'widget/src/data/results_2022.json', dirname(__DIR__)  ).'"></canvas>';
+				write_log(plugins_url( 'widget/src/data/results_2024.json', dirname(__DIR__)  ));
+				echo '<canvas id="donor-graphic" width="1200" height="900" data-code="'.strtolower($code).'" data-colours="'.$donorColours[2].','.$donorColours[0].'" data-path="'.plugins_url( 'widget/src/data/results_2024.json', dirname(__DIR__)  ).'"></canvas>';
 				do_action( 'wp_footer' );
 			}else{
 				http_response_code(404);
