@@ -53,16 +53,17 @@ function App({ settings }) {
             wpdonors.forEach(d => {
                 d.name = d.cmb2.ati_donor_meta_2024_metabox.ati_donor_meta_2024_code.replace(', ', '-');
                 d.lang = d.cmb2.ati_page_2024_meta_details.ati_page_2024_meta_language;
-                //console.log('d.lang',d.lang)
+                // console.log('d.name',d.name);
+                // console.log('d.lang',d.lang);
             })
             let findDonor = name => wpdonors.find(d => (d.name === name && d.lang === 'en'));
             donorData.forEach(donor => {
                 let wpdonor = findDonor(donor.name);
                 if(wpdonor !== undefined){
-                    // console.log('wpdonor', wpdonor);
                     let footnote = wpdonor.cmb2.ati_donor_meta_2024_metabox.ati_donor_meta_2024_footnote;
                     let {link, title} = wpdonor;
                     Object.assign(donor,{link, title, footnote})
+                    // console.log('donor', donor);
                 }
 
             })

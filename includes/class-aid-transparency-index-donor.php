@@ -188,7 +188,7 @@ add_action( 'cmb2_init', 'tasty_register_donor_metabox_2024' );
 		) );
 		$donor_meta->add_field( array(
 			'name'       => esc_html__( 'Donor code', 'aid-transparency-index-2024' ),
-			'description'=> esc_html__( 'Case insensitive. Must match the donor’s organisation_name field in the results data', 'aid-transparency-index-2024' ),
+			'description'=> esc_html__( 'Must match the donor’s organisation_name_code field in the results data', 'aid-transparency-index-2024' ),
 			'id'         => $prefix . 'code',
 			'type'       => 'text_medium'
 		) );

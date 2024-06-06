@@ -1,4 +1,5 @@
 import React from 'react';
+import { createRoot } from 'react-dom/client';
 //import ReactDOM from 'react-dom';
 const ReactDOM = wp.element;
 import './index.css';
@@ -20,12 +21,10 @@ const defaultSettings = {
 Array.prototype.forEach.call(targets, target => {
     const id = target.dataset.id;
     const settings = (!! id) ? window.atiSettings[id] : defaultSettings;
-    ReactDOM.render(
-        <React.StrictMode>
+    const root = createRoot(target);
+    root.render(<React.StrictMode>
             <App settings={settings} key={id} />
-        </React.StrictMode>,
-        target
-    );
+        </React.StrictMode>);
 });
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
