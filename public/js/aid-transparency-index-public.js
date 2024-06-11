@@ -65,7 +65,7 @@
 				let data = [];
 
 				Object.keys(Results).map((ati,index) => {
-					Results[ati].label = Results[ati].name + ' (' + Results[ati].score.toFixed(1) + ')';
+					Results[ati].label = Results[ati].display_name + ' (' + Results[ati].score.toFixed(1) + ')';
 					Results[ati].id = index;
 					Results[ati].code = ati;
 					return data.push(Results[ati]);
@@ -203,7 +203,6 @@
 					ctx.beginPath();
 					ctx.font = '12px sans-serif';
 					ctx.fillStyle = color;
-
 					let text = ctx.measureText(target.label);
 					let textX = (target.x + text.width + padding > chartWidth) ? chartWidth - text.width - padding : target.x + 6;
 					//let textY = (Number(target.y) - 18 < 0 ) ? 'hanging': 'bottom';

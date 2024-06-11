@@ -25,9 +25,9 @@ const DonorTable = (props) => {
         if (donor.title !== undefined){
             // console.log('l',window.location)
             // The bar’s blur event is blocking onCLick and href link, onMouseDown event triggers before blur..
-            return (<a href={donor.link} onMouseDown={(e)=>(window.location.href = e.target.href)} title={donor.title.rendered}>{donor.name}</a>)
+            return (<a href={donor.link} onMouseDown={(e)=>(window.location.href = e.target.href)} title={donor.title.rendered}>{donor.display_name}</a>)
         }else{
-            return (<span>{donor.name}</span>)
+            return (<span>{donor.display_name}</span>)
         }
     }
     const renderGroup = (donor) => {

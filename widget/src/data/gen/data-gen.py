@@ -61,6 +61,7 @@ results = sorted(
 orgs = {slugify(x['organisation_name_code']): {
     'score': 0.,
     'name': x['organisation_name_code'].replace(', ', '-'),
+    'display_name': x['organisation_name_short'].replace(', ', '-'),
     'components': OrderedDict(),
 } for x in results}
 

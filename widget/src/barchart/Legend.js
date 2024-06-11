@@ -26,7 +26,7 @@ const DonorData = (props) => {
                 // The bar’s blur event is blocking onCLick and href link, onMouseDown event triggers before blur..
                 return (<a href={donor.link} onMouseDown={(e)=>(window.location.href = e.target.href)} dangerouslySetInnerHTML={{__html: donor.title.rendered  }} />)
             }else{
-                return (<span>{donor.name}</span>)
+                return (<span>{donor.display_name}</span>)
             }
         }
         const showFootnote = (footnote) => {

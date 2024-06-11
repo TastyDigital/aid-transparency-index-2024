@@ -38,7 +38,7 @@ const DonorBar = (props) => {
              ref={thisBar}
         >
             <SVG
-                title={donor.name}
+                title={donor.display_name}
                 description={donor.label}
                 height={barHeight.toString()}
                 width={barWidth.toString()}
@@ -63,7 +63,7 @@ const DonorBar = (props) => {
                         let donorData = {
                             isActive: props.isActive,
                             id: donor.id,
-                            name: donor.name,
+                            name: donor.display_name,
                             label: donor.label,
                             rank: donor.rank,
                             score: donor.score.toFixed(1),
@@ -88,7 +88,7 @@ const DonorBar = (props) => {
                     })}
                 </g>
             </SVG>
-            <div className={'donor-label'} style={{height:barWidth.toString()+'px'}}><span>{donor.name}</span></div>
+            <div className={'donor-label'} style={{height:barWidth.toString()+'px'}}><span>{donor.display_name}</span></div>
         </div>
 
     );

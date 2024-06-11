@@ -10,9 +10,7 @@ const components = [
     { index:4, value:'Performance', weight:'20'}
 ];
 Object.keys(Results).map((ati,index) => {
-    let label = Results[ati].name + ' (' + Results[ati].score.toFixed(1) + ')';
-
-    Results[ati].label = label;
+    Results[ati].label = Results[ati].display_name + ' (' + Results[ati].score.toFixed(1) + ')';
     Results[ati].id = index;
 
     // surface component weighted scores to help with table sorting...
