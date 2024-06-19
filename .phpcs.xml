@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<ruleset name="Aid Transparency Index 2024">
+  <rule ref="WordPress.NamingConventions.ValidConstantName">
+    <exclude name="ABSPATH"/>
+  </rule>
+</ruleset>

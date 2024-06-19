@@ -12,6 +12,10 @@
     "@wordpress/scripts": "^27.8.0",
     "ase-util": "^1.0.3",
     "babel-minify": "^0.5.2",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "postcss-minify": "^1.1.0",
+    "postcss-nested": "^6.0.1",
     "webpack": "^5.91.0"
   },
   "dependencies": {
@@ -39,7 +43,10 @@
     "test:e2e": "wp-scripts test-e2e",
     "test:unit": "wp-scripts test-unit-js",
     "palette": "asedump --pretty -f json --export ./src/swatches/PWYF_2024.ase > ./src/swatches/palette.js",
-    "donorpagejs": "babel ../public/js --out-dir ../public/dist --presets=@babel/env && minify ../public/dist/aid-transparency-index-public.js --outFile ../public/dist/aid-transparency-index-public.min.js"
+    "donorpagejs": "babel ../public/js --out-dir ../public/dist --presets=@babel/env && minify ../public/dist/aid-transparency-index-public.js --outFile ../public/dist/aid-transparency-index-public.min.js",
+    "pagestyles": "postcss ../public/css/*.css --use autoprefixer postcss-nested --env development -o ../public/dist/main.css",
+    "pagestyles:production": "postcss ../public/css/*.css --use autoprefixer postcss-nested postcss-minify --env production -o ../public/dist/main.css",
+    "pagestyles:watch": "postcss ../public/css/*.css --use autoprefixer postcss-nested --watch --env development -o ../public/dist/main.css"
   },
   "eslintConfig": {
     "extends": "react-app"

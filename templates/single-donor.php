@@ -133,7 +133,8 @@
 			echo '<div class="donor-position" style="background-color: ' . $donorColours[1] . ';color:' . $donorColours[4] . ';">'.atiTranslate('Position', $lang).': <span class="year-position">' . $donorData['position'] . '</span></div>';
 		}
 		if ( ! empty( $donorData['performance_group'] ) && !empty($donorColours) ) {
-			echo '<div class="performance-group" style="background-color: ' . $donorColours[0] . ';color:' . $donorColours[4] . ';">2024 <span class="year-category" style="color:' . $donorColours[2] . ';">' . atiTranslate($donorData['performance_group'],$lang) . '</span></div>';
+			//echo '<div class="performance-group" style="background-color: ' . $donorColours[0] . ';color:' . $donorColours[4] . ';">2024 <span class="year-category" style="color:' . $donorColours[2] . ';">' . atiTranslate($donorData['performance_group'],$lang) . '</span></div>';
+			echo '<div class="performance-group" style="background-color: ' . $donorColours[0] . ';color:' . $donorColours[4] . ';">2024 <span class="year-category" style="color:#FFFFFF;">' . atiTranslate($donorData['performance_group'],$lang) . '</span></div>';
 		}
 		echo '</div>';
 

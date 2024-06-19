@@ -73,7 +73,7 @@ class Aid_Transparency_Index_2024_Public {
 		 * class.
 		 */
 		if ( get_post_type( get_the_ID() ) === 'donor_2024'  || is_post_type_archive('donor_2024') ){
-			wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/aid-transparency-index-public.css', array( get_stylesheet() ), filemtime( plugin_dir_path( __FILE__ ) . 'css/aid-transparency-index-public.css' ), 'all' );
+			wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'dist/main.css', array( get_stylesheet() ), filemtime( plugin_dir_path( __FILE__ ) . 'dist/main.css' ), 'all' );
 		}
 	}
 

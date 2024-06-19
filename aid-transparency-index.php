@@ -30,7 +30,7 @@
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
-
+require_once ABSPATH . 'wp-admin/includes/plugin.php'; 
 /**
  * Currently plugin version.
  * Start at version 1.0.0 and use SemVer - https://semver.org
@@ -40,6 +40,7 @@ define( 'Aid_Transparency_Index_2024_VERSION', '1.0.1' );
 define( 'ATI_2024_WIDGET_PATH', plugin_dir_path( __FILE__ ) . 'widget' );
 define( 'ATI_2024_ASSET_FILE', ATI_2024_WIDGET_PATH . '/build/index.asset.php' );
 define( 'ATI_2024_INCLUDES', plugin_dir_path( __FILE__ ) . 'includes' );
+
 
 /**
  * The code that runs during plugin activation.

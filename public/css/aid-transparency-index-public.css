@@ -5,30 +5,61 @@
 
 /* @import url("http://pwyf.local/app/plugins/aid-transparency-index/admin/css/pdf.css"); */
 
-.aid-transparency-index-2024 h1,
-article.type-donor_2024 h1,
-.aid-transparency-index-2024 h2,
-article.type-donor_2024 h2,
-.aid-transparency-index-2024 h3,
-article.type-donor_2024 h3,
-.aid-transparency-index-2024 h4,
-article.type-donor_2024 h4,
-.aid-transparency-index-2024 h5,
-article.type-donor_2024 h5,
-.aid-transparency-index-2024 h6
-article.type-donor_2024 h6 {
-    color: #4d4d4d;
+:root {
+    --2024-very-good-blue: #24B8EB;
+    --2024-good-green: #8EC640;
+    --2024-fair-orange: #F58220;
+    --2024-poor-pink: #EB0A8C;
+    --2024-very-poor-purple: #7670B3;
+    --2024-dark-grey: #384147;
+    --2024-light-grey: #C7D6D7;
 }
-.aid-transparency-index-2024 .entry-header,
-article.type-donor_2024 .entry-header {
-    background-color: #ececec;
-    padding: 1.5rem 0.5rem 2rem;
-    /* background-image: url("ati2024-header-bg@2x.png"); */
-    background-size: cover;
+body.single-donor_2024,
+body.post-type-archive-donor_2024 {
+    .site-inner,
+    .site-inner .content-sidebar-wrap,
+    .content .entry {
+        background-color: var(--2024-dark-grey);
+        color: #FFFFFF;
+        a {
+                color: var(--2024-light-grey);
+                &:hover {
+                    color: #FFFFFF;
+                }
+            }
+    }
+    .site-inner {
+        padding-top:1rem;
+
+        h1,h2,h3,h4,h5,h6 {
+            color: #FFFFFF;
+        }
+        .breadcrumb {
+            background-color: rgba(255,255,255,0.1);
+            color: #FFFFFF;
+            
+        }
+        .deep-dive > h2 {
+            color: var(--2024-light-grey);
+        }
+        .deep-dive .tab-content {
+            h1,h2,h3,h4,h5,h6 {
+                color: var(--2024-dark-grey);
+            }
+        }
+    }
+} 
+
+.aid-transparency-index-2024,
+article.type-donor_2024 {
+    .entry-header {
+        padding: 1.5rem 0 2rem;
+    }
 }
 .aid-transparency-index-2024 .entry-header {
     margin-bottom:2rem;
 }
+
 .aid-transparency-index-2024 h1.entry-title,
 article.type-donor_2024 h1.entry-title {
     font-weight: bold;
@@ -117,7 +148,6 @@ article.type-donor_2024 .donor-panels .donor-panel {
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
     max-width: 100vw;
-    background-color: #ececec;
 }
 .deep-dive {
     padding-top: 2rem;
@@ -129,11 +159,18 @@ article.type-donor_2024 .donor-panels .donor-panel {
 
 .deep-dive .nav-tabs .nav-link {
     font-size: 0.875rem;
-    color: #4d4d4d;
+    color: var(--2024-light-grey);
+    background-color: rgba(255,255,255,0.1);
 }
 .deep-dive .nav-tabs .nav-link.active {
     color: #222222;
+    background-color: #FFFFFF;
     font-weight: 500;
+}
+.deep-dive .nav-tabs .nav-link:focus, 
+.deep-dive .nav-tabs .nav-link:hover {
+    border-color: rgba(255,255,255,0.2) rgba(255,255,255,0.2) transparent;
+
 }
 .deep-dive .nav-tabs .nav-link:focus {
     outline: none;
@@ -194,10 +231,11 @@ article.type-donor_2024 .donor-panels .donor-panel {
     color: #95989A;
 }
 .indicator-score .indicator-row > div > span {
-    color:#222222;
+    color:var(--2024-dark-grey);
 }
 .component-scores div.score {
     margin-bottom: 1rem;
+    color: var(--2024-dark-grey);
 }
 .component-scores div.label {
     color: #999999;
@@ -238,8 +276,8 @@ article.type-donor_2024 .donor-panels .donor-panel {
 .performance-history > div {
     padding: 6px 12px;
     flex:1;
-    border-left: 1px solid #FFF;
-    border-bottom: 1px solid #FFF;
+    border-left: 1px solid var(--2024-dark-grey);
+    border-bottom: 1px solid var(--2024-dark-grey);
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 0.1em;
@@ -254,7 +292,7 @@ article.type-donor_2024 .donor-panels .donor-panel {
 .donor-panel > .component-performance {
     padding-bottom: 1rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .donor-panel > .component-performance > a:hover {
     text-decoration: none;
@@ -264,10 +302,10 @@ article.type-donor_2024 .donor-panels .donor-panel {
 }
 .donor-panel > .component-performance .label {
     font-size:0.875rem;
-    color: #939AAA;
+    color: var(--2024-light-grey);
 }
 .donor-panel > .component-performance .score {
-    color: #2c2c2c;
+    color: #ffffff;
     float:right;
 }
 

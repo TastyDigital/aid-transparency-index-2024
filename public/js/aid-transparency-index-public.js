@@ -118,7 +118,7 @@
 				ctx.lineTo( chartWidth ,0);
 				ctx.lineTo( chartWidth ,chartHeight);
 				ctx.lineTo( 0 ,chartHeight);
-				ctx.fillStyle = '#FFFFFF';
+				ctx.fillStyle = '#384147';
 				ctx.fill();
 
 				let xPlot = 0;
