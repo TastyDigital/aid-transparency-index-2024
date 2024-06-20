@@ -33,12 +33,12 @@
 
 .barchart .yAxis-measure {
     position: absolute;
-    width: 20px; /* leftPad - 20 */
-    top:-0.3125rem;
+    width: 1.5rem; /* leftPad - 20 */
+    top:-0.5rem;
     left:0;
     height: 480px;
-    font-size:0.625rem;
-    color: #000;
+    font-size:1rem;
+    color: #FFF;
     text-align: right;
 }
 .barchart .yAxis-measure.right-side {
@@ -48,7 +48,9 @@
 .barchart .yAxis-measure .tick {
     position: absolute;
     width:100%;
-    margin-right: 4px;
+}
+.barchart .yAxis-measure.left-side .tick {
+    right: 0.5rem;
 }
 .barchart .category-group .group-bars {
     display: flex;
@@ -60,8 +62,7 @@
 }
 .barchart .category-group .category-grid {
     position: absolute;
-    border-top:8px solid #fff;
-    border-right:1px solid #d1d0c8;
+    border-top:1px solid #fff;
     width:100%;
     height:145px;
     left:-3px;
@@ -90,16 +91,16 @@
     outline: none;
 }
 .aid-donor > svg .clickbg {
-    fill:#FFFFFF;
+    fill:transparent;
 }
 .aid-donor:hover > svg .clickbg {
-    fill:#EEEEEE !important; /* overwriting inline fill needed for htl2canvas */
+    fill:transparent !important; /* overwriting inline fill needed for htl2canvas */
 }
 .aid-donor > svg .component-stack {
     pointer-events: all;
 }
 .barchart.active-chart .aid-donor:hover > svg .clickbg {
-    fill:#FFFFFF !important;
+    fill:transparent !important;
 }
 .category-group {
     position: relative;
@@ -126,7 +127,7 @@
     width: 315px;
     padding: 1em 1em .8em;
     border:1px solid #CCC;
-    background-color: rgba(256,256,256,0.9);
+    background-color: rgba(56,65,71,0.9);
 }
 .category-group .group-title {
     position: absolute;
@@ -135,8 +136,8 @@
 }
 .category-group .group-title > span {
     display: block;
-    border-top: 4px solid;
     text-align: center;
+    color: #FFFFFF;
 }
 .category-group .group-title > span > span {
     font-size:.75rem;
@@ -248,7 +249,8 @@ i.circle {
     align-items:center;
     flex-direction: column;
     transition: height .2s ease-out, font-size .2s ease-out;
-    color:#000;
+    color: #FFFFFF;
+
 }
 svg.bar {
     pointer-events: none;
@@ -266,4 +268,15 @@ svg.bar g {
     margin-left:12px;
     font-size:0.75rem;
     border: 1px solid #CCCCCC;
+}
+
+.component-stack-container {
+    visibility: hidden;
+}
+.active-bar .component-stack-container {
+    visibility: visible;
+}
+
+.active-bar .score-bar-container {
+    display:none;
 }

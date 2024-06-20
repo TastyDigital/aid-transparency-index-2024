@@ -25,7 +25,7 @@ Object.keys(Results).map((ati,index) => {
     //return [ data.push(Results[ati]), groups[grp].push(Results[ati])];
     return data.push(Results[ati]);
 });
-// console.log('data', data);
+console.log('data', data);
 // console.log('groups', groups);
 export { components, data };
 

@@ -3,7 +3,7 @@ import {getColor} from "../swatches/getColor";
 import SVG from "./SVG";
 
 const DonorBar = (props) => {
-    const barProportion = .2;
+    const barProportion = .8;
 
     const donor = props.donor;
     const thisBar = createRef(); // we attach this DOM ref to the donor data object and pass it up through props.onChildClick
@@ -50,11 +50,11 @@ const DonorBar = (props) => {
                     height={barHeight.toString()}
                     y={0}
                     x={0}
-                    style={{fill:'#FFFFFF'}}
+                    style={{fill:'transparent'}}
                 />
 
 
-                <g id={'bar_'+donor.label} >
+                <g id={'bar_'+donor.name} className="component-stack-container" >
                     {props.components.map(component => {
                         let componentHeight = donor['component_'+component.index] * barHeight/100;
                         componentHeight = props.isActive ? componentHeight * 100 / donor.score : componentHeight;
@@ -82,10 +82,21 @@ const DonorBar = (props) => {
                                 x={(barWidth-bw)/2}
                                 data-for='pointerdata'
                                 data-tip={JSON.stringify(donorData)}
-                                data-background-color={getColor(category, props.components[3])}
+                                data-background-color={getColor(category, props.components[0])}
                             />
                         )
                     })}
+                </g>
+                <g id={`score_${donor.name} `} className="score-bar-container">
+                    <rect
+                        className='total-score-bar'
+                        style={{fill:getColor(category, props.components[0])}}
+                        name={donor.label}
+                        width={bw}
+                        height={donor.score * barHeight/100}
+                        x={(barWidth-bw)/2}
+                        y={barHeight - (donor.score * barHeight/100)}
+                    />
                 </g>
             </SVG>
             <div className={'donor-label'} style={{height:barWidth.toString()+'px'}}><span>{donor.display_name}</span></div>

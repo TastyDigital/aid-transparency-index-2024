@@ -129,7 +129,7 @@ const BarChart = (props) => {
                             style={{ paddingRight: barWidth*.25 +'px' }}
                             data-tip={category}
                         >
-                            <span style={{borderColor:getColor(category, props.components[0]), color:getColor(category, props.components[0])}}>
+                            <span style={{backgroundColor:getColor(category, props.components[0])}}>
                                 <span>{category}</span>
                             </span>
                         </div>
