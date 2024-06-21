@@ -381,3 +381,12 @@ article.type-donor_2024 .donor-panels .donor-panel {
 .pdf-print-only {
     display: none;
 }
+
+
+@media only screen and (min-width: 992px) {
+    body.single-donor_2024 .language-selector {
+        position: absolute;
+        top: .25rem;
+        right: 1.3125rem;
+    }
+}
