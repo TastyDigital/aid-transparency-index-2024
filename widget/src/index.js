@@ -9,7 +9,7 @@ const targets = document.querySelectorAll('.ati-root');
 const defaultSettings = {
     'display': 'graph', // 'graph', // 'barchart', // 'table'
     'color': '#0000ff',
-    'theme': '2020',
+    'theme': '2024',
     'name': 'World',
     'height':480,
     'width':1080,

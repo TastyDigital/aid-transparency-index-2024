@@ -77,6 +77,14 @@ body {
     position: relative;
     box-sizing: border-box;
     /*overflow: hidden;*/
+    
+        .score-bar-container:hover {
+            opacity: .8;
+        }
+    
+}
+.total-score-bar {
+    transition: width ease-out .2s;
 }
 .barchart .bargroups {
     display: flex;
