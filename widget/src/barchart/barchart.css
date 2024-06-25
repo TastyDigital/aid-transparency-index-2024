@@ -7,13 +7,13 @@
     box-sizing: border-box;
     /*overflow: hidden;*/
     
-        .score-bar-container:hover {
+        /* .score-bar-container:hover {
             opacity: .8;
-        }
+        } */
     
 }
 .total-score-bar {
-    transition: width ease-out .2s;
+    transition: width .2s ease-out;
 }
 .barchart .bargroups {
     display: flex;
