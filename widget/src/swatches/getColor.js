@@ -20,5 +20,10 @@ const getColor = (category, component) => {
     return color[0];
 }
 
+const convertToSentenceCase  = (theString) => {
+	const newString = theString.toLowerCase().replace(/(^\s*\w|[\.\!\?]\s*\w)/g,function(c){return c.toUpperCase()});
+  return newString;
+}
 
-export { categories, getColor };
+
+export { categories, getColor, convertToSentenceCase };
