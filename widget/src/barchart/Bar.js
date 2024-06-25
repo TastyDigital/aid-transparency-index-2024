@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, {useRef} from "react";
 import {getColor, convertToSentenceCase} from "../swatches/getColor";
 import SVG from "./SVG";
 
@@ -32,12 +32,13 @@ const DonorBar = (props) => {
     const colorAnimationRef = useRef(null);
     const yAnimationRef = useRef(null);
     const markerAnimationRef = useRef(null);
-    let timeOut = null;
+    console.log('donor.id', donor.id);
+    const donorStringId = donor.name.replace(/\s+/g, '-').toLowerCase();
 
     const bw = props.isActive ? barWidth : (barWidth * barProportion).toFixed(2);
     let ypos = barHeight;
-
-    let barClass = ['aid-donor', 'donor-'+donor.name.replace(/\s+/g, '-').toLowerCase()];
+    let timeOut = null;
+    let barClass = ['aid-donor', 'donor-'+donorStringId];
 
     if(props.isActive) {
         barClass.push('active-bar');
@@ -54,22 +55,18 @@ const DonorBar = (props) => {
         if(!heightAnimationRef.current || prevYearMarkerPosition === null) {
             return;
         }
-        // Set the initial state immediately
-        //animationTargetRef.current.setAttribute('fill', prevYearColor); //prevYearColor);      // Update the `from` attribute of the color animation
-    
         // Start all animations
         heightAnimationRef.current.beginElement();
         yAnimationRef.current.beginElement();
         markerAnimationRef.current.beginElement();
-        // clearTimeout(timeOut);
-        // animationTargetRef.current.style.fill = prevYearColor; //prevYearColor;
-        // timeOut = setTimeout(() => {
-        // animationTargetRef.current.style.fill = prevYearColor; //prevYearColor;
-        //     // reset colour
-        //     animationTargetRef.current.style.fill = prevYearColor; 
-        //     animationTargetRef.current.setAttribute('fill', prevYearColor);
+        clearTimeout(timeOut);
+        // Set the initial state immediately
+        animationTargetRef.current.setAttribute('fill', prevYearColor);
+        timeOut = setTimeout(() => {
+            // reset colour
+            animationTargetRef.current.setAttribute('fill', color);
             colorAnimationRef.current.beginElement();
-        // }, 1000);
+        }, 500);
     };
 
     return (
@@ -165,7 +162,6 @@ const DonorBar = (props) => {
                         to={barHeight - (donor.score * barHeight / 100)}
                         begin="indefinite"
                         dur={duration}
-                        fill="freeze"
                     />
                     )}
                     {/* Animate color */}
@@ -173,11 +169,11 @@ const DonorBar = (props) => {
                     <animate
                         ref={colorAnimationRef}
                         attributeName="fill"
+      attributeType="XML"
                         from={prevYearColor}
                         to={color}
                         begin="indefinite"
                         dur={duration}
-                        fill="freeze"
                     />
                     )}
                     </rect>

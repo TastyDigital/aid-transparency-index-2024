@@ -279,10 +279,13 @@ svg.bar g {
 }
 
 .component-stack-container {
-    visibility: hidden;
+    opacity:0;
+    display:none;
+    transition: opacity .2s ease-out;
 }
 .active-bar .component-stack-container {
-    visibility: visible;
+    opacity:1;
+    display:block;
 }
 
 .active-bar .score-bar-container {
