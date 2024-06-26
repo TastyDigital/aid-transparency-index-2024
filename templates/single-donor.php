@@ -104,7 +104,38 @@
 		$colours = getColours();
 
 		if(!empty($donorData)){
-			$donorColours = $colours[$donorData['performance_group']];
+
+			// first we’ll check for historic data
+			if(is_array($donorData['history'])){
+				$performance = [];
+
+				foreach ($donorData['history'] as $record) {
+					$year = $record['year'];
+					// Round the score to 2 decimal places
+					$score = round($record['score'], 2);
+					$performance_group = ucfirst(strtolower($record['performance_group']));
+					$performance[$year] = [$score, $colours[$performance_group][0]];
+				}
+				$perf_group = ucfirst(strtolower($donorData['performance_group']));
+				$performance[2024] = [ round($donorData['score'],2), $colours[$perf_group][0] ];
+				// Sort the array by keys (years) in ascending order
+				ksort($performance);
+			}
+
+			$machinecode = str_replace(' ', '-', $code);
+			$machinecode = str_replace(array(' ',',','.'), '', $machinecode);
+			if(count($performance) > 1){
+				// Convert the PHP array to JSON
+				$performanceJson = json_encode($performance);
+
+				// Escape the JSON for HTML attribute use
+				$escapedPerformanceJson = htmlspecialchars($performanceJson, ENT_QUOTES, 'UTF-8');
+				$graph = '<canvas id="historic-performance-graphic" class="img-fluid" width="688" height="516" data-code="'.strtolower($machinecode).'" data-name="'.$donorData['display_name'].'" data-performance="'.$escapedPerformanceJson.'"></canvas>';
+			}else{
+				$donorColours = $colours[$donorData['performance_group']];
+				$graph = '<canvas id="donor-graphic" class="img-fluid" width="688" height="516" data-code="'.strtolower($machinecode).'" data-colours="'.$donorColours[2].','.$donorColours[0].'" data-path="'.plugins_url( 'widget/src/data/results_2024.json', dirname(__FILE__) ).'"></canvas>';
+			}
+
 		}
 
 		//$download_id = get_post_meta( get_the_ID(), 'ati_page_2024_meta_pdf_download_id_2024', true );
@@ -112,12 +143,10 @@
 		echo '<div class="row donor-content"><div class="col-md-5 donor-graph">';
 		echo '<div class="graph-wrapper position-sticky">';
 		//echo do_shortcode( "[ati-graphs-2024 display=\"graph\" agency=\"{$code}\"]" );
-
+		// echo '<pre style="color:#FFF">'.print_r($performance,true).'</pre>';
+		// echo '<pre style="color:#FFF">'.print_r($donorData,true).'</pre>';
 		// need to try alternative graph drawing because React App not showing in PDF printing..
-		$machinecode = str_replace(' ', '-', $code);
-		$machinecode = str_replace(array(' ',',','.'), '', $machinecode);
-		echo '<canvas id="donor-graphic" class="img-fluid" width="688" height="516" data-code="'.strtolower($machinecode).'" data-colours="'.$donorColours[2].','.$donorColours[0].'" data-path="'.plugins_url( 'widget/src/data/results_2024.json', dirname(__FILE__) ).'"></canvas>';
-
+		echo $graph;
 //		if(!empty($download_id)){
 //			echo do_shortcode('[download id="'.$download_id.'" template="download-profile-'.$lang.'"]');
 //		}

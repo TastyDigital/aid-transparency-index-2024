@@ -1,8 +1,27 @@
 (function( $ ) {
 	'use strict';
 
-	$(document).ready(() => {
-		if( $('#nav-tab').length && $('#deep-dive').length ) {
+	$(function() {
+		
+		initTabs()
+
+		const canvas = $('#donor-graphic');
+		if(canvas.length > 0){
+			rankingGraph(canvas);
+		}
+		const canvas2 = $('#historic-performance-graphic');
+		if(canvas2.length > 0){
+			historicGraph(canvas2);
+		}
+
+	});
+
+
+})( jQuery );
+
+
+function initTabs() {
+	if( $('#nav-tab').length && $('#deep-dive').length ) {
 
 			let url = location.href.replace(/\/$/, "");
 
@@ -37,10 +56,11 @@
 				}
 			});
 		}
+}
 
-		const canvas = $('#donor-graphic');
-		if(canvas.length > 0){
-			const ctx = canvas[0].getContext('2d', {
+function rankingGraph(canvas){
+
+		const ctx = canvas[0].getContext('2d', {
 				alpha: false
 			});
 			const code = canvas.data( "code" );
@@ -128,7 +148,7 @@
 					//console.log(element);
 					//console.log(element.label);
 					if(target && target.cat !== index){
-						element.color = "#ececec";
+						element.color = "rgba(255, 255, 255, 0.3)";
 					}
 
 					ctx.beginPath();
@@ -215,10 +235,96 @@
 
 				}
 			});
-
-		}
-
-	});
+}
 
 
-})( jQuery );
+
+function historicGraph(canvas){
+	console.log('historicGraph');
+		const ctx = canvas[0].getContext('2d', {
+				alpha: false
+			});
+			const code = canvas.data( "code" );
+			const name = canvas.data( "name" );
+			const performance = canvas.data( "performance" );
+			
+			console.log('name',name);
+			console.log('performance',performance);
+
+			const spacer = 24;
+			const dotRadius = 8;
+			const padding = dotRadius + 2;
+			const chartWidth = canvas.attr('width');
+			const chartHeight = canvas.attr('height');
+			const graphHeight = chartHeight - ( 2 * padding ) - spacer;
+			const graphWidth = chartWidth - ( 2 * padding ) - spacer;
+			const timeSteps = graphWidth / 11; // 2013 - 2024 (11 years)
+
+			
+				// draw background box
+				ctx.beginPath();
+				ctx.moveTo( 0,0);
+				ctx.lineTo( chartWidth ,0);
+				ctx.lineTo( chartWidth ,chartHeight);
+				ctx.lineTo( 0 ,chartHeight);
+				//ctx.fillStyle = '#384147';
+				ctx.fillStyle = "rgba(0,0,0, 0.2)";
+				ctx.fill();
+
+				// draw the y axis
+				ctx.beginPath();
+				ctx.moveTo( padding + spacer, padding);
+				ctx.lineTo( padding + spacer, graphHeight + padding);
+				ctx.strokeStyle = "rgba(255, 255, 255, 0.2)";
+				ctx.lineWidth = 1;
+				ctx.stroke();
+
+				// draw the x axis
+				ctx.beginPath();
+				ctx.moveTo( padding + spacer, graphHeight + padding);
+				ctx.lineTo( chartWidth - padding, graphHeight + padding);
+				ctx.strokeStyle = "rgba(255, 255, 255, 0.2)";
+				ctx.lineWidth = 1;
+				ctx.stroke();
+
+				// first plot the line graph
+				ctx.beginPath();	
+				let count = 0;
+				for(let i = 2013; i <= 2024; i++){
+					let element = performance[i];
+					if(!element) continue;
+					
+					let score = element[0];
+					let xPlot = Math.round((i - 2013) * timeSteps) + spacer + padding;
+					let yPlot = (graphHeight + padding) - ((score / 100) * graphHeight);
+					
+					if(count === 0){
+						ctx.moveTo(xPlot , yPlot);
+					}else{
+						ctx.lineTo(xPlot , yPlot);
+					}
+					count++;
+				}
+				ctx.strokeStyle = "rgba(255, 255, 255, 0.2)";
+				ctx.lineWidth = 1;
+				ctx.stroke();
+
+				// now plot the dots
+				for(let i = 2013; i <= 2024; i++){
+					let element = performance[i];
+					if(!element) continue;
+					console.log('element',element);
+
+					let [score, color] = element;
+					let xPlot = Math.round((i - 2013) * timeSteps) + spacer + padding;
+					let yPlot = (graphHeight + padding) - ((score / 100) * graphHeight);
+					
+					ctx.beginPath();
+					ctx.arc(xPlot , yPlot, dotRadius, 0, 2 * Math.PI);
+					ctx.fillStyle = color;
+					ctx.fill();
+
+				}
+
+
+}

@@ -70,6 +70,7 @@
 				do_action( 'wp_head' );
 				write_log(plugins_url( 'widget/src/data/results_2024.json', dirname(__DIR__)  ));
 				echo '<canvas id="donor-graphic" width="1200" height="900" data-code="'.strtolower($code).'" data-colours="'.$donorColours[2].','.$donorColours[0].'" data-path="'.plugins_url( 'widget/src/data/results_2024.json', dirname(__DIR__)  ).'"></canvas>';
+				echo '<canvas id="historic-performance-graphic" width="1200" height="900" data-code="'.strtolower($code).'" data-path="'.plugins_url( 'widget/src/data/results_2024.json', dirname(__DIR__)  ).'"></canvas>';
 				do_action( 'wp_footer' );
 			}else{
 				http_response_code(404);
