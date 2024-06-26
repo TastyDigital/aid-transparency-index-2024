@@ -326,5 +326,6 @@ function historicGraph(canvas){
 
 				}
 
+				// TODO: add years and scores with tick marks to axis increments, also display related scores next to dots.
 
 }

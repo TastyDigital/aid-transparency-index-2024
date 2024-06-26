@@ -102,6 +102,7 @@
 
 		$donorData = get_aid_donor_data();
 		$colours = getColours();
+		$donorColours = $colours[$donorData['performance_group']];
 
 		if(!empty($donorData)){
 
@@ -132,7 +133,6 @@
 				$escapedPerformanceJson = htmlspecialchars($performanceJson, ENT_QUOTES, 'UTF-8');
 				$graph = '<canvas id="historic-performance-graphic" class="img-fluid" width="688" height="516" data-code="'.strtolower($machinecode).'" data-name="'.$donorData['display_name'].'" data-performance="'.$escapedPerformanceJson.'"></canvas>';
 			}else{
-				$donorColours = $colours[$donorData['performance_group']];
 				$graph = '<canvas id="donor-graphic" class="img-fluid" width="688" height="516" data-code="'.strtolower($machinecode).'" data-colours="'.$donorColours[2].','.$donorColours[0].'" data-path="'.plugins_url( 'widget/src/data/results_2024.json', dirname(__FILE__) ).'"></canvas>';
 			}
 
