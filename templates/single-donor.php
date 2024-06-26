@@ -107,7 +107,7 @@
 		if(!empty($donorData)){
 
 			// first we’ll check for historic data
-			if(is_array($donorData['history'])){
+			if(!empty($donorData['history']) && is_array($donorData['history'])){
 				$performance = [];
 				$include_footnote = false;
 				foreach ($donorData['history'] as $record) {
@@ -131,7 +131,7 @@
 
 			$machinecode = str_replace(' ', '-', $code);
 			$machinecode = str_replace(array(' ',',','.'), '', $machinecode);
-			if(count($performance) > 1){
+			if(!empty($performance) && count($performance) > 1){
 				// Convert the PHP array to JSON
 				$performanceJson = json_encode($performance);
 				if($include_footnote){
