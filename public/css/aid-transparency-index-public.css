@@ -400,4 +400,10 @@ figure.historic-data figcaption {
     font-weight: 700;
     font-size: .75rem;
     margin-bottom:2rem;
+    padding-left: 6%;
+}
+figure.historic-data small{
+    margin-bottom:1rem;
+    padding-left: 6%;
+    display: block;
 }
