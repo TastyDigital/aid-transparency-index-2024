@@ -109,13 +109,19 @@
 			// first we’ll check for historic data
 			if(is_array($donorData['history'])){
 				$performance = [];
-
+				$include_footnote = false;
 				foreach ($donorData['history'] as $record) {
-					$year = $record['year'];
-					// Round the score to 2 decimal places
-					$score = round($record['score'], 2);
-					$performance_group = ucfirst(strtolower($record['performance_group']));
-					$performance[$year] = [$score, $colours[$performance_group][0]];
+					if($record['score'] !== null && $record['score'] !== ''){
+						$year = $record['year'];
+						// Round the score to 2 decimal places
+						$score = round($record['score'], 2);
+						$performance_group = ucfirst(strtolower($record['performance_group']));
+						$performance[$year] = [$score, $colours[$performance_group][0]];
+						
+						if($year < 2017){
+							$include_footnote = true;
+						}
+					}
 				}
 				$perf_group = ucfirst(strtolower($donorData['performance_group']));
 				$performance[2024] = [ round($donorData['score'],2), $colours[$perf_group][0] ];
@@ -128,10 +134,14 @@
 			if(count($performance) > 1){
 				// Convert the PHP array to JSON
 				$performanceJson = json_encode($performance);
-
+				if($include_footnote){
+				$footnote = '<small>'.__('The methodology for the Aid Transparency Index continues to evolve. Changes to the methodology made after 2016 means that results are not directly comparable before this time.','aid-transparency-index-2024').'</small>';
+				}else{
+					$footnote = '';
+				}
 				// Escape the JSON for HTML attribute use
 				$escapedPerformanceJson = htmlspecialchars($performanceJson, ENT_QUOTES, 'UTF-8');
-				$graph = '<canvas id="historic-performance-graphic" class="img-fluid" width="688" height="516" data-code="'.strtolower($machinecode).'" data-name="'.$donorData['display_name'].'" data-performance="'.$escapedPerformanceJson.'"></canvas>';
+				$graph = '<figure class="historic-data"><canvas id="historic-performance-graphic" class="img-fluid" width="688" height="516" data-code="'.strtolower($machinecode).'" data-name="'.$donorData['display_name'].'" data-performance="'.$escapedPerformanceJson.'"></canvas><figcaption>'.$donorData['display_name'].' – '.__('Historical performance','aid-transparency-index-2024').'</figcaption>'.$footnote.'</figure>';
 			}else{
 				$graph = '<canvas id="donor-graphic" class="img-fluid" width="688" height="516" data-code="'.strtolower($machinecode).'" data-colours="'.$donorColours[2].','.$donorColours[0].'" data-path="'.plugins_url( 'widget/src/data/results_2024.json', dirname(__FILE__) ).'"></canvas>';
 			}
@@ -159,7 +169,7 @@
 			echo '<div class="donor-score" style="background-color: ' . $donorColours[2] . ';color:#FFF;">'.atiTranslate('Score', $lang).': <span class="year-score">' . round( $donorData['score'], 1 ) . '</span></div>';
 		}
 		if ( ! empty( $donorData['position'] ) && !empty($donorColours) ) {
-			echo '<div class="donor-position" style="background-color: ' . $donorColours[1] . ';color:' . $donorColours[4] . ';">'.atiTranslate('Position', $lang).': <span class="year-position">' . $donorData['position'] . '</span></div>';
+			echo '<div class="donor-position" style="background-color: ' . $donorColours[1] . ';color:' . $donorColours[4] . ';">'.atiTranslate('Position', $lang).': <span class="year-position" style="color:#FFFFFF;">' . $donorData['position'] . '</span></div>';
 		}
 		if ( ! empty( $donorData['performance_group'] ) && !empty($donorColours) ) {
 			//echo '<div class="performance-group" style="background-color: ' . $donorColours[0] . ';color:' . $donorColours[4] . ';">2024 <span class="year-category" style="color:' . $donorColours[2] . ';">' . atiTranslate($donorData['performance_group'],$lang) . '</span></div>';
@@ -188,20 +198,20 @@
 
 		//echo '<pre>'.print_r($colours,true).'</pre>';
 
-		if($donorData) {
-			echo '<div class="donor-result donor-panel">';
+		// if($donorData) {
+		// 	echo '<div class="donor-result donor-panel">';
 
-			if ( ! empty( $donorData['history'] ) ) {
-				//echo '<pre>'.print_r($donorData['history'],true).'</pre>';
-				echo '<div class="performance-history">';
-				foreach ( $donorData['history'] as $value ) {
-					$perf_group = ucfirst(strtolower($value['performance_group'])); // bad data in..
-					echo '<div class="performance-year performance-year-' . $value['year'] . '" style="background-color: ' . $colours[ $perf_group ][0] . ';color: ' . $colours[ $perf_group ][4] . '">' . $value['year'] . ' <span class="year-category" style="color: ' . $colours[ $perf_group ][2] . '">' . atiTranslate($perf_group,$lang) . '</span></div>';
-				}
-				echo '</div>';
-			}
-			echo '</div>';
-		}
+		// 	if ( ! empty( $donorData['history'] ) ) {
+		// 		//echo '<pre>'.print_r($donorData['history'],true).'</pre>';
+		// 		echo '<div class="performance-history">';
+		// 		foreach ( $donorData['history'] as $value ) {
+		// 			$perf_group = ucfirst(strtolower($value['performance_group'])); // bad data in..
+		// 			echo '<div class="performance-year performance-year-' . $value['year'] . '" style="background-color: ' . $colours[ $perf_group ][0] . ';color: ' . $colours[ $perf_group ][4] . '">' . $value['year'] . ' <span class="year-category" style="color: ' . $colours[ $perf_group ][2] . '">' . atiTranslate($perf_group,$lang) . '</span></div>';
+		// 		}
+		// 		echo '</div>';
+		// 	}
+		// 	echo '</div>';
+		// }
 		echo '<div class="donor-study row">';
 		if($donorData){
 			if(!empty($donorData['components'])){

@@ -26,6 +26,9 @@ body.post-type-archive-donor_2024 {
                 &:hover {
                     color: #FFFFFF;
                 }
+                &.active:hover {
+                    color: var(--2024-dark-grey, #000);
+                }
             }
     }
     .site-inner {
@@ -389,4 +392,12 @@ article.type-donor_2024 .donor-panels .donor-panel {
         top: .25rem;
         right: 1.3125rem;
     }
+}
+
+figure.historic-data figcaption {
+    text-align:center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .75rem;
+    margin-bottom:2rem;
 }

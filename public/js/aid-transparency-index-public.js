@@ -3,25 +3,7 @@
 
 	$(function() {
 		
-		initTabs()
-
-		const canvas = $('#donor-graphic');
-		if(canvas.length > 0){
-			rankingGraph(canvas);
-		}
-		const canvas2 = $('#historic-performance-graphic');
-		if(canvas2.length > 0){
-			historicGraph(canvas2);
-		}
-
-	});
-
-
-})( jQuery );
-
-
-function initTabs() {
-	if( $('#nav-tab').length && $('#deep-dive').length ) {
+		if( $('#nav-tab').length && $('#deep-dive').length ) {
 
 			let url = location.href.replace(/\/$/, "");
 
@@ -56,7 +38,29 @@ function initTabs() {
 				}
 			});
 		}
-}
+
+		const canvas = $('#donor-graphic');
+		if(canvas.length > 0){
+			rankingGraph(canvas);
+		}
+		const canvas2 = $('#historic-performance-graphic');
+		if(canvas2.length > 0){
+			document.fonts.load('300 14px Montserrat').then(function() {
+				// The font has loaded
+				historicGraph(canvas2);
+			}).catch(function(err) {
+				console.error('Font loading failed', err);
+			});
+
+			
+		}
+
+	});
+
+
+})( jQuery );
+
+
 
 function rankingGraph(canvas){
 
@@ -240,7 +244,7 @@ function rankingGraph(canvas){
 
 
 function historicGraph(canvas){
-	console.log('historicGraph');
+	
 		const ctx = canvas[0].getContext('2d', {
 				alpha: false
 			});
@@ -248,18 +252,19 @@ function historicGraph(canvas){
 			const name = canvas.data( "name" );
 			const performance = canvas.data( "performance" );
 			
-			console.log('name',name);
-			console.log('performance',performance);
+			// console.log('name',name);
+			// console.log('performance',performance);
 
 			const spacer = 24;
 			const dotRadius = 8;
-			const padding = dotRadius + 2;
+			const padding = 18;
 			const chartWidth = canvas.attr('width');
 			const chartHeight = canvas.attr('height');
 			const graphHeight = chartHeight - ( 2 * padding ) - spacer;
 			const graphWidth = chartWidth - ( 2 * padding ) - spacer;
 			const timeSteps = graphWidth / 11; // 2013 - 2024 (11 years)
-
+			const strokeStyle = "rgba(255, 255, 255, 0.4)";
+			const fontStyle = "300 14px 'Montserrat', sans-serif";
 			
 				// draw background box
 				ctx.beginPath();
@@ -267,23 +272,38 @@ function historicGraph(canvas){
 				ctx.lineTo( chartWidth ,0);
 				ctx.lineTo( chartWidth ,chartHeight);
 				ctx.lineTo( 0 ,chartHeight);
-				//ctx.fillStyle = '#384147';
-				ctx.fillStyle = "rgba(0,0,0, 0.2)";
+				ctx.fillStyle = '#384147';
+				//ctx.fillStyle = "rgba(0,0,0, 0.2)";
 				ctx.fill();
 
 				// draw the y axis
 				ctx.beginPath();
 				ctx.moveTo( padding + spacer, padding);
 				ctx.lineTo( padding + spacer, graphHeight + padding);
-				ctx.strokeStyle = "rgba(255, 255, 255, 0.2)";
+				ctx.strokeStyle = strokeStyle;
 				ctx.lineWidth = 1;
 				ctx.stroke();
+
+				for(let i = 0; i <= 100; i+=20){
+					let yPlot = (graphHeight + padding) - ((i / 100) * graphHeight);
+					ctx.beginPath();
+					ctx.moveTo( padding + spacer - 1, yPlot);
+					ctx.lineTo( padding + spacer - dotRadius, yPlot);
+					ctx.strokeStyle = strokeStyle;
+					ctx.lineWidth = 1;
+					ctx.stroke();
+
+					ctx.font = fontStyle;
+					ctx.textAlign = "right";
+					ctx.fillStyle = "rgba(255, 255, 255, 0.6)";
+					ctx.fillText(i, padding + spacer - dotRadius - 3, yPlot + 4);
+				}
 
 				// draw the x axis
 				ctx.beginPath();
 				ctx.moveTo( padding + spacer, graphHeight + padding);
 				ctx.lineTo( chartWidth - padding, graphHeight + padding);
-				ctx.strokeStyle = "rgba(255, 255, 255, 0.2)";
+				ctx.strokeStyle = strokeStyle;
 				ctx.lineWidth = 1;
 				ctx.stroke();
 
@@ -303,29 +323,50 @@ function historicGraph(canvas){
 					}else{
 						ctx.lineTo(xPlot , yPlot);
 					}
+
 					count++;
 				}
-				ctx.strokeStyle = "rgba(255, 255, 255, 0.2)";
+				ctx.strokeStyle = strokeStyle;
 				ctx.lineWidth = 1;
 				ctx.stroke();
 
 				// now plot the dots
 				for(let i = 2013; i <= 2024; i++){
+
+					let xPlot = Math.round((i - 2013) * timeSteps) + spacer + padding;
+					ctx.beginPath();
+					ctx.moveTo(xPlot , graphHeight + padding + 1);
+					ctx.lineTo(xPlot , graphHeight + padding + dotRadius);
+					ctx.strokeStyle = strokeStyle;
+					ctx.lineWidth = 1;
+					ctx.stroke();
+
+					ctx.font = fontStyle;
+					ctx.textAlign = "center";
+					ctx.fillStyle = "rgba(255, 255, 255, 0.6)";
+					if(i % 2 === 0){
+						ctx.fillText(i, xPlot, graphHeight + padding + (2 * dotRadius) + 6);
+					}
+					
+
 					let element = performance[i];
 					if(!element) continue;
-					console.log('element',element);
 
 					let [score, color] = element;
-					let xPlot = Math.round((i - 2013) * timeSteps) + spacer + padding;
 					let yPlot = (graphHeight + padding) - ((score / 100) * graphHeight);
 					
+					ctx.fillStyle = "#FFF";
+					ctx.fillText(`${score}`, xPlot, yPlot -  (2 * dotRadius));
+
 					ctx.beginPath();
 					ctx.arc(xPlot , yPlot, dotRadius, 0, 2 * Math.PI);
 					ctx.fillStyle = color;
 					ctx.fill();
 
+
 				}
 
 				// TODO: add years and scores with tick marks to axis increments, also display related scores next to dots.
+
 
 }

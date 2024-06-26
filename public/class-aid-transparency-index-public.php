@@ -99,10 +99,10 @@ class Aid_Transparency_Index_2024_Public {
 		if ( get_post_type( get_the_ID() ) === 'donor_2024' || is_post_type_archive('donor_2024') ) {
 			// this script depends on jquery and the bootstrap 4 library, using get_stylesheet() as expect this to be loaded with theme
 			wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js', array( 'jquery' ), '4.6.2', true);
-			wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/aid-transparency-index-public.js', array(
+			wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'dist/aid-transparency-index-public.min.js', array(
 				'jquery',
 				'bootstrap'
-			), filemtime( plugin_dir_path( __FILE__ ) . 'js/aid-transparency-index-public.js' ), true );
+			), filemtime( plugin_dir_path( __FILE__ ) . 'dist/aid-transparency-index-public.min.js' ), true );
 			//wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/aid-transparency-index-public.js', array( 'jquery', get_stylesheet()), filemtime( plugin_dir_path( __FILE__ ) . 'js/aid-transparency-index-public.js'), true);
 
 			//* wp-scripts react scripts *//
