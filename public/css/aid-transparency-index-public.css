@@ -37,6 +37,10 @@ body.post-type-archive-donor_2024 {
         h1,h2,h3,h4,h5,h6 {
             color: #FFFFFF;
         }
+        .modal-content,
+        h5.modal-title {
+            color: var(--2024-dark-grey, #000);
+        }
         .breadcrumb {
             background-color: rgba(255,255,255,0.1);
             color: #FFFFFF;
@@ -183,6 +187,7 @@ article.type-donor_2024 .donor-panels .donor-panel {
     border: 1px solid #dee2e6;
     border-top:none;
     background-color: #FFFFFF;
+    color: var(--2024-dark-grey);
     margin-bottom: 2rem;
 }
 .deep-dive .tab-content>.tab-pane.active {
