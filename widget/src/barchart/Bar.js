@@ -1,6 +1,7 @@
 import React, {useRef} from "react";
 import {getColor, convertToSentenceCase} from "../swatches/getColor";
 import SVG from "./SVG";
+import Marker from "./Marker";
 
 const DonorBar = (props) => {
     const barProportion = .8;
@@ -10,7 +11,7 @@ const DonorBar = (props) => {
     //const thisBar = createRef(); // we attach this DOM ref to the donor data object and pass it up through props.onChildClick
     const thisBar = useRef(null); // Updated to useRef which is more appropriate for refs in functional components
 
-    const duration = '.5s';
+    let duration = .5;
     donor.barRef = thisBar;
 
     const barWidth = props.isActive ? 3 * props.barWidth : props.barWidth;
@@ -24,6 +25,15 @@ const DonorBar = (props) => {
     const prevYearCat = prevYearData ? convertToSentenceCase(prevYearData.performance_group) : null; // Safeguard in case no data found
     const prevYearColor = getColor(prevYearCat, props.components[0]);
 
+    if(prevYearScore !== null) {
+        // console.log('name', donor.name);
+        // console.log('prevYearScore', prevYearScore);
+        // console.log('score', donor.score);
+        // console.log('prevYearScore - score', Math.abs(prevYearScore - donor.score));
+        duration = Math.abs(prevYearScore - donor.score) * 0.05;
+        //console.log('duration', duration);
+    }
+
     // Calculate position for the previous year's marker
     const prevYearMarkerPosition = prevYearScore ? barHeight - (prevYearScore * barHeight / 100) : null;
 
@@ -32,7 +42,7 @@ const DonorBar = (props) => {
     const colorAnimationRef = useRef(null);
     const yAnimationRef = useRef(null);
     const markerAnimationRef = useRef(null);
-    console.log('donor.id', donor.id);
+    //console.log('donor.id', donor.id);
     const donorStringId = donor.name.replace(/\s+/g, '-').toLowerCase();
 
     const bw = props.isActive ? barWidth : (barWidth * barProportion).toFixed(2);
@@ -66,7 +76,7 @@ const DonorBar = (props) => {
             // reset colour
             animationTargetRef.current.setAttribute('fill', color);
             colorAnimationRef.current.beginElement();
-        }, 500);
+        }, duration * 1000);
     };
 
     return (
@@ -149,7 +159,7 @@ const DonorBar = (props) => {
                         from={prevYearScore * barHeight / 100}
                         to={donor.score * barHeight / 100}
                         begin="indefinite"
-                        dur={duration}
+                        dur={duration+ 's'}
                         fill="freeze"
                     />
                     )}
@@ -161,7 +171,7 @@ const DonorBar = (props) => {
                         from={prevYearMarkerPosition}
                         to={barHeight - (donor.score * barHeight / 100)}
                         begin="indefinite"
-                        dur={duration}
+                        dur={duration+ 's'}
                     />
                     )}
                     {/* Animate color */}
@@ -173,29 +183,34 @@ const DonorBar = (props) => {
                         from={prevYearColor}
                         to={color}
                         begin="indefinite"
-                        dur={duration}
+                        dur={'.5s'}
                     />
                     )}
                     </rect>
                          {/* Marker for previous year's score */}
                     {prevYearMarkerPosition && (
-                        <rect
-                            fill="white"
+                        // <path style={{fill:'#c7d6d7',strokeWidth:0}} d="M0,4.23C8.95-.33,18.86-.69,28.5.97c3.17.64,6.34,1.54,9.5,3.26v.49c-3.17.09-6.34.15-9.5.16-4.74.08-14.27.08-19.01,0-3.17,0-6.34-.07-9.5-.16v-.49Z">
+                        <svg
                             width={bw}
                             opacity={1}
-                            height="1"
+                            viewBox="0 0 38 5"
                             x={(barWidth - bw) / 2}
-                            y={prevYearMarkerPosition}>
+                            y={prevYearMarkerPosition - (barHeight / 2)}>
+                                <path 
+                                fill="#c7d6d7"
+                                width={bw}
+                                d="M0,4.23C8.95-.33,18.86-.69,28.5.97c3.17.64,6.34,1.54,9.5,3.26v.49c-3.17.09-6.34.15-9.5.16-4.74.08-14.27.08-19.01,0-3.17,0-6.34-.07-9.5-.16v-.49Z">
                             <animate
                                 ref={markerAnimationRef}
                                 attributeName="opacity"
                                 from="0"
                                 to="1"
                                 begin="indefinite"
-                                dur={duration}
+                                dur={duration+ 's'}
                                 fill="freeze"
                             />
-                        </rect>
+                            </path>
+                        </svg>
                         
                     )}
                     

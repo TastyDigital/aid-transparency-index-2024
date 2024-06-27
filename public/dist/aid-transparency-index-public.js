@@ -218,7 +218,7 @@ function historicGraph(canvas) {
 
   const spacer = 24;
   const dotRadius = 8;
-  const padding = 18;
+  const padding = 24;
   const chartWidth = canvas.attr('width');
   const chartHeight = canvas.attr('height');
   const graphHeight = chartHeight - 2 * padding - spacer;

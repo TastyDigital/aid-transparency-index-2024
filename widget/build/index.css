@@ -158,7 +158,7 @@ body {
 .barchart .category-group .group-bars .aid-donor {
    /* flex-grow:1;*/
     flex-wrap: nowrap;
-
+    z-index:2;
 }
 .barchart .category-group .group-bars .aid-donor.active-bar .donor-label span {
     font-size: 1.1em;
@@ -193,6 +193,7 @@ body {
     top:1rem;
     right:1rem;
     pointer-events: none;
+    z-index:200;
 }
 
 .barchart .legend .panel.datasheet {
@@ -361,6 +362,45 @@ svg.bar g {
 
 .active-bar .score-bar-container {
     display:none;
+}
+
+.chart-key {
+    position: absolute;
+    top: 4%;
+    right: 7%;
+    border: 1px solid var(--2024-light-grey, #C7D6D7);
+    color:var(--2024-light-grey, #C7D6D7);
+    border-radius: .75rem;
+    padding: .5rem .75rem;
+    font-weight: 500;
+    z-index: 1;
+    transition: opacity ease-out .2s;
+}
+.chart-key .colour-key {
+    margin-bottom: .5rem;
+
+}
+.chart-key .colour-key,
+.chart-key .last-year-marker {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: .75rem;
+}
+
+.chart-key svg,
+.chart-key label {
+    display:block;
+    line-height:1;
+    margin:0;
+}
+.chart-key svg {
+    width:2rem;
+}
+
+.barchart.active-chart .chart-key {
+    opacity:0;
 }
 caption {
     padding-top: .75rem;

@@ -4,6 +4,8 @@ import Bar from "./Bar";
 import ReactTooltip from "react-tooltip";
 import './barchart.css';
 import Legend from './Legend';
+import SVG from "./SVG";
+import Marker from "./Marker";
 
 // import { exportComponentAsPDF, exportComponentAsPNG } from "react-component-export-image";
 
@@ -175,6 +177,23 @@ const BarChart = (props) => {
             <Legend components={props.components} activeDonor={isActive} panelStyles={legendStyles} />
             <ChartAxis edge={"left-side"} />
             <ChartAxis edge={"right-side"} />
+            <div className='chart-key'>
+                <div className='colour-key'> 
+                    <SVG
+                        title='colour-keys'
+                        description='colour-keys'
+                        height={'10'}
+                        width={'35'}
+                        className={'colour-keys'}
+                    >
+                        <rect style={{fill:getColor('Very good', props.components[0])}} width="6.26" height="9.95"/><rect style={{fill:getColor('Good', props.components[0])}} x="7.26" y="0" width="6.26" height="9.95"/><rect style={{fill:getColor('Fair', props.components[0])}} x="14.41" y="0" width="6.26" height="9.95"/><rect style={{fill:getColor('Poor', props.components[0])}} x="21.56" y="0" width="6.26" height="9.95"/><rect style={{fill:getColor('Very poor', props.components[0])}} x="28.72" y="0" width="6.26" height="9.95"/>
+                    </SVG>
+                    <label>2024 Score</label>
+                </div>
+                <div className='last-year-marker'>
+                    <Marker />
+                    <label>2022 Score</label></div>
+            </div>
         </div>
     );
 }
