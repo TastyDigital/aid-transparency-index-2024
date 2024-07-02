@@ -86,7 +86,7 @@
 			echo '<div class="ati-reports-downloads row">' . $report_downloads . '</div>';
 		}
 
-		echo '<div class="d-flex align-items-center flex-row mx-auto mb-3" style="max-width: 900px;"><svg class="mr-3 flex-grow-1" style="width:90px;height:90px;opacity:.75"><use href="#mouse"></use></svg>';
+		echo '<div class="d-flex align-items-center flex-row mx-auto mb-3" style="max-width: 900px;"><svg class="mr-3 flex-grow-1 d-none d-md-block" style="width:90px;height:90px;opacity:.75"><use href="#mouse"></use></svg>';
 		echo '<p class="flex-grow-1 m-0">'.__('Roll over the graph to see how scores have changed since 2022. Click once to view more information about an agency’s performance and click again to access a detailed agency profile.', 'aid-transparency-index-2024').'</p></div>';
 		echo '</div>';
 
