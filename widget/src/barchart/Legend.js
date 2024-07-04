@@ -44,8 +44,8 @@ const DonorData = (props) => {
                 </div>
                 <div className='data-position'>
                     <span className='data-performance'>Performance: <strong>{donor.performance_group}</strong></span>
-                    <span className='data-rank'>Rank: <strong>#{donor.rank}</strong></span>
-                    <span className='data-score'>Score: <strong>{donor.score.toFixed(1)}</strong></span>
+                    <span className='data-rank'>Rank: <strong>#{donor.rank_combined}</strong></span>
+                    <span className='data-score'>Score: <strong>{donor.score_rounded}</strong></span>
                 </div>
                 <ul className='data-components'>
                     {components}

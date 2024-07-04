@@ -3,8 +3,6 @@
         "display_name": "AfDB - Sovereign", 
         "name": "AfDB - Sovereign", 
         "performance_group": "Very good", 
-        "score_rounded": 98.8, 
-        "rank_combined": 1, 
         "rank": 1, 
         "score": 98.83622314899999, 
         "components": {
@@ -335,8 +333,6 @@
         "display_name": "IADB", 
         "name": "IADB", 
         "performance_group": "Very good", 
-        "score_rounded": 96.3, 
-        "rank_combined": 2, 
         "rank": 2, 
         "score": 96.32069370099998, 
         "components": {
@@ -687,8 +683,6 @@
         "display_name": "US-MCC", 
         "name": "US-MCC", 
         "performance_group": "Very good", 
-        "score_rounded": 93.0, 
-        "rank_combined": 3, 
         "rank": 3, 
         "score": 92.99330196200002, 
         "components": {
@@ -1046,8 +1040,6 @@
         "display_name": "World Bank-IDA", 
         "name": "World Bank-IDA", 
         "performance_group": "Very good", 
-        "score_rounded": 92.2, 
-        "rank_combined": 4, 
         "rank": 4, 
         "score": 92.245804987, 
         "components": {
@@ -1398,8 +1390,6 @@
         "display_name": "UN OCHA", 
         "name": "UN OCHA", 
         "performance_group": "Very good", 
-        "score_rounded": 92.2, 
-        "rank_combined": 4, 
         "rank": 5, 
         "score": 92.20711671, 
         "components": {
@@ -1754,8 +1744,6 @@
         "display_name": "UNDP", 
         "name": "UNDP", 
         "performance_group": "Very good", 
-        "score_rounded": 91.5, 
-        "rank_combined": 6, 
         "rank": 6, 
         "score": 91.49013745299997, 
         "components": {
@@ -2104,8 +2092,6 @@
         "display_name": "AsDB - Sovereign", 
         "name": "AsDB - Sovereign", 
         "performance_group": "Very good", 
-        "score_rounded": 91.1, 
-        "rank_combined": 7, 
         "rank": 7, 
         "score": 91.051463841, 
         "components": {
@@ -2438,8 +2424,6 @@
         "display_name": "UNICEF", 
         "name": "UNICEF", 
         "performance_group": "Very good", 
-        "score_rounded": 86.2, 
-        "rank_combined": 8, 
         "rank": 8, 
         "score": 86.21468635, 
         "components": {
@@ -2792,8 +2776,6 @@
         "display_name": "WFP", 
         "name": "WFP", 
         "performance_group": "Very good", 
-        "score_rounded": 84.5, 
-        "rank_combined": 9, 
         "rank": 9, 
         "score": 84.536744551, 
         "components": {
@@ -3115,8 +3097,6 @@
         "display_name": "EC-INTPA", 
         "name": "EC-INTPA", 
         "performance_group": "Very good", 
-        "score_rounded": 82.9, 
-        "rank_combined": 10, 
         "rank": 10, 
         "score": 82.92614831899999, 
         "components": {
@@ -3474,8 +3454,6 @@
         "display_name": "UK-FCDO", 
         "name": "UK-FCDO", 
         "performance_group": "Very good", 
-        "score_rounded": 82.9, 
-        "rank_combined": 10, 
         "rank": 11, 
         "score": 82.89010308400002, 
         "components": {
@@ -3831,8 +3809,6 @@
         "display_name": "GAVI", 
         "name": "GAVI", 
         "performance_group": "Very good", 
-        "score_rounded": 81.3, 
-        "rank_combined": 12, 
         "rank": 12, 
         "score": 81.349425535, 
         "components": {
@@ -4185,8 +4161,6 @@
         "display_name": "AfDB - Non-Sov.", 
         "name": "AfDB - Non-Sov.", 
         "performance_group": "Good", 
-        "score_rounded": 78.8, 
-        "rank_combined": 13, 
         "rank": 13, 
         "score": 78.82519391800001, 
         "components": {
@@ -4512,8 +4486,6 @@
         "display_name": "Global Fund", 
         "name": "Global Fund", 
         "performance_group": "Good", 
-        "score_rounded": 78.4, 
-        "rank_combined": 14, 
         "rank": 14, 
         "score": 78.392820309, 
         "components": {
@@ -4866,8 +4838,6 @@
         "display_name": "EC-ECHO", 
         "name": "EC-ECHO", 
         "performance_group": "Good", 
-        "score_rounded": 75.9, 
-        "rank_combined": 15, 
         "rank": 15, 
         "score": 75.897987645, 
         "components": {
@@ -5233,8 +5203,6 @@
         "display_name": "Sweden-Sida", 
         "name": "Sweden-Sida", 
         "performance_group": "Good", 
-        "score_rounded": 75.4, 
-        "rank_combined": 16, 
         "rank": 16, 
         "score": 75.436526513, 
         "components": {
@@ -5596,8 +5564,6 @@
         "display_name": "Germany-BMZ-GIZ", 
         "name": "Germany-BMZ-GIZ", 
         "performance_group": "Good", 
-        "score_rounded": 75.2, 
-        "rank_combined": 17, 
         "rank": 17, 
         "score": 75.18488992099998, 
         "components": {
@@ -5958,8 +5924,6 @@
         "display_name": "AsDB - Non-Sov.", 
         "name": "AsDB - Non-Sov.", 
         "performance_group": "Good", 
-        "score_rounded": 74.4, 
-        "rank_combined": 18, 
         "rank": 18, 
         "score": 74.40031450299999, 
         "components": {
@@ -6291,8 +6255,6 @@
         "display_name": "Belgium-DGD", 
         "name": "Belgium-DGD", 
         "performance_group": "Good", 
-        "score_rounded": 74.2, 
-        "rank_combined": 19, 
         "rank": 19, 
         "score": 74.216885624, 
         "components": {
@@ -6654,8 +6616,6 @@
         "display_name": "WHO", 
         "name": "WHO", 
         "performance_group": "Good", 
-        "score_rounded": 73.7, 
-        "rank_combined": 20, 
         "rank": 20, 
         "score": 73.71127219499999, 
         "components": {
@@ -6995,8 +6955,6 @@
         "display_name": "EC-NEAR", 
         "name": "EC-NEAR", 
         "performance_group": "Good", 
-        "score_rounded": 73.3, 
-        "rank_combined": 21, 
         "rank": 21, 
         "score": 73.27833315399998, 
         "components": {
@@ -7354,8 +7312,6 @@
         "display_name": "Korea-KOICA", 
         "name": "Korea-KOICA", 
         "performance_group": "Good", 
-        "score_rounded": 71.8, 
-        "rank_combined": 22, 
         "rank": 22, 
         "score": 71.794064604, 
         "components": {
@@ -7722,8 +7678,6 @@
         "display_name": "EBRD - Non-Sov.", 
         "name": "EBRD - Non-Sov.", 
         "performance_group": "Good", 
-        "score_rounded": 68.4, 
-        "rank_combined": 23, 
         "rank": 23, 
         "score": 68.448820537, 
         "components": {
@@ -8051,8 +8005,6 @@
         "display_name": "EBRD - Sovereign", 
         "name": "EBRD - Sovereign", 
         "performance_group": "Good", 
-        "score_rounded": 67.1, 
-        "rank_combined": 24, 
         "rank": 24, 
         "score": 67.08878879100001, 
         "components": {
@@ -8383,8 +8335,6 @@
         "display_name": "US-USAID", 
         "name": "US-USAID", 
         "performance_group": "Good", 
-        "score_rounded": 66.1, 
-        "rank_combined": 25, 
         "rank": 25, 
         "score": 66.082414351, 
         "components": {
@@ -8748,8 +8698,6 @@
         "display_name": "Gates Foundation", 
         "name": "Gates Foundation", 
         "performance_group": "Good", 
-        "score_rounded": 64.3, 
-        "rank_combined": 26, 
         "rank": 26, 
         "score": 64.340355598, 
         "components": {
@@ -9104,8 +9052,6 @@
         "display_name": "Netherlands-MFA", 
         "name": "Netherlands-MFA", 
         "performance_group": "Good", 
-        "score_rounded": 63.5, 
-        "rank_combined": 27, 
         "rank": 27, 
         "score": 63.50373801100001, 
         "components": {
@@ -9471,8 +9417,6 @@
         "display_name": "UNHCR", 
         "name": "UNHCR", 
         "performance_group": "Good", 
-        "score_rounded": 63.4, 
-        "rank_combined": 28, 
         "rank": 28, 
         "score": 63.364733320999996, 
         "components": {
@@ -9801,8 +9745,6 @@
         "display_name": "Italy-AICS", 
         "name": "Italy-AICS", 
         "performance_group": "Good", 
-        "score_rounded": 61.4, 
-        "rank_combined": 29, 
         "rank": 29, 
         "score": 61.38871547999999, 
         "components": {
@@ -10160,8 +10102,6 @@
         "display_name": "New Zealand-MFAT", 
         "name": "New Zealand-MFAT", 
         "performance_group": "Good", 
-        "score_rounded": 60.4, 
-        "rank_combined": 30, 
         "rank": 30, 
         "score": 60.38764013, 
         "components": {
@@ -10511,8 +10451,6 @@
         "display_name": "Canada-GAC", 
         "name": "Canada-GAC", 
         "performance_group": "Good", 
-        "score_rounded": 60.1, 
-        "rank_combined": 31, 
         "rank": 31, 
         "score": 60.083522101000014, 
         "components": {
@@ -10865,8 +10803,6 @@
         "display_name": "World Bank-IFC", 
         "name": "World Bank-IFC", 
         "performance_group": "Fair", 
-        "score_rounded": 59.8, 
-        "rank_combined": 32, 
         "rank": 32, 
         "score": 59.775871425000005, 
         "components": {
@@ -11221,8 +11157,6 @@
         "display_name": "Finland-MFA", 
         "name": "Finland-MFA", 
         "performance_group": "Fair", 
-        "score_rounded": 58.4, 
-        "rank_combined": 33, 
         "rank": 33, 
         "score": 58.377900485, 
         "components": {
@@ -11582,8 +11516,6 @@
         "display_name": "IDB Invest", 
         "name": "IDB Invest", 
         "performance_group": "Fair", 
-        "score_rounded": 57.7, 
-        "rank_combined": 34, 
         "rank": 34, 
         "score": 57.65435015500001, 
         "components": {
@@ -11913,8 +11845,6 @@
         "display_name": "France-AFD", 
         "name": "France-AFD", 
         "performance_group": "Fair", 
-        "score_rounded": 57.1, 
-        "rank_combined": 35, 
         "rank": 35, 
         "score": 57.099969161, 
         "components": {
@@ -12284,8 +12214,6 @@
         "display_name": "EIB - Sovereign", 
         "name": "EIB - Sovereign", 
         "performance_group": "Fair", 
-        "score_rounded": 55.1, 
-        "rank_combined": 36, 
         "rank": 36, 
         "score": 55.051347287, 
         "components": {
@@ -12620,8 +12548,6 @@
         "display_name": "Japan-JICA", 
         "name": "Japan-JICA", 
         "performance_group": "Fair", 
-        "score_rounded": 54.8, 
-        "rank_combined": 37, 
         "rank": 37, 
         "score": 54.843458384000016, 
         "components": {
@@ -12980,8 +12906,6 @@
         "display_name": "Denmark-MFA", 
         "name": "Denmark-MFA", 
         "performance_group": "Fair", 
-        "score_rounded": 50.9, 
-        "rank_combined": 38, 
         "rank": 38, 
         "score": 50.895732218000006, 
         "components": {
@@ -13348,8 +13272,6 @@
         "display_name": "Norway-MFA", 
         "name": "Norway-MFA", 
         "performance_group": "Fair", 
-        "score_rounded": 50.5, 
-        "rank_combined": 39, 
         "rank": 39, 
         "score": 50.518365295999985, 
         "components": {
@@ -13708,8 +13630,6 @@
         "display_name": "US-State", 
         "name": "US-State", 
         "performance_group": "Fair", 
-        "score_rounded": 48.6, 
-        "rank_combined": 40, 
         "rank": 40, 
         "score": 48.642147601000005, 
         "components": {
@@ -14072,8 +13992,6 @@
         "display_name": "EIB - Non-Sov.", 
         "name": "EIB - Non-Sov.", 
         "performance_group": "Fair", 
-        "score_rounded": 48.3, 
-        "rank_combined": 41, 
         "rank": 41, 
         "score": 48.29914392700001, 
         "components": {
@@ -14403,8 +14321,6 @@
         "display_name": "Ireland-Irish Aid", 
         "name": "Ireland-Irish Aid", 
         "performance_group": "Fair", 
-        "score_rounded": 47.9, 
-        "rank_combined": 42, 
         "rank": 42, 
         "score": 47.892310865000006, 
         "components": {
@@ -14758,8 +14674,6 @@
         "display_name": "Switzerland-SDC", 
         "name": "Switzerland-SDC", 
         "performance_group": "Fair", 
-        "score_rounded": 46.6, 
-        "rank_combined": 43, 
         "rank": 43, 
         "score": 46.55646245000001, 
         "components": {
@@ -15117,8 +15031,6 @@
         "display_name": "UAE-MOFAIC", 
         "name": "UAE-MOFAIC", 
         "performance_group": "Fair", 
-        "score_rounded": 44.1, 
-        "rank_combined": 44, 
         "rank": 44, 
         "score": 44.117043364999994, 
         "components": {
@@ -15460,8 +15372,6 @@
         "display_name": "Saudi Arabia-KSRelief", 
         "name": "Saudi Arabia-KSRelief", 
         "performance_group": "Fair", 
-        "score_rounded": 43.8, 
-        "rank_combined": 45, 
         "rank": 45, 
         "score": 43.755061341, 
         "components": {
@@ -15800,8 +15710,6 @@
         "display_name": "US-HHS", 
         "name": "US-HHS", 
         "performance_group": "Poor", 
-        "score_rounded": 34.8, 
-        "rank_combined": 46, 
         "rank": 46, 
         "score": 34.756429143000005, 
         "components": {
@@ -16130,8 +16038,6 @@
         "display_name": "Germany-FFO", 
         "name": "Germany-FFO", 
         "performance_group": "Poor", 
-        "score_rounded": 27.9, 
-        "rank_combined": 47, 
         "rank": 47, 
         "score": 27.898707957999996, 
         "components": {
@@ -16457,8 +16363,6 @@
         "display_name": "Australia-DFAT", 
         "name": "Australia-DFAT", 
         "performance_group": "Poor", 
-        "score_rounded": 27.2, 
-        "rank_combined": 48, 
         "rank": 48, 
         "score": 27.167334923000006, 
         "components": {
@@ -16825,8 +16729,6 @@
         "display_name": "Spain-AECID", 
         "name": "Spain-AECID", 
         "performance_group": "Very poor", 
-        "score_rounded": 5.0, 
-        "rank_combined": 49, 
         "rank": 49, 
         "score": 4.99975, 
         "components": {
@@ -17180,8 +17082,6 @@
         "display_name": "China-CIDCA", 
         "name": "China-MOFCOM", 
         "performance_group": "Very poor", 
-        "score_rounded": 2.2, 
-        "rank_combined": 50, 
         "rank": 50, 
         "score": 2.1873750000000003, 
         "components": {

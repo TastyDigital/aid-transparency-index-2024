@@ -157,8 +157,21 @@ for name, org in orgs.items():
 orgs = OrderedDict(
     sorted(orgs.items(), key=lambda x: x[1]['score'], reverse=True))
 
+prev_score_rounded = None
+prev_rank_combined = None
+
 for idx, org in enumerate(orgs.values()):
     org['rank'] = idx + 1
+    org['score_rounded'] = round(org['score'], 1)
+    if org['score_rounded'] == prev_score_rounded:
+        org['rank_combined'] = prev_rank_combined
+    else:
+        org['rank_combined'] = idx + 1
+    prev_score_rounded = org['score_rounded']
+    prev_rank_combined = org['rank_combined']
+
+# for idx, org in enumerate(orgs.values()):
+#     org['rank'] = idx + 1
 
 with open(join(rootpath, '_data', 'results_2024.json'), 'w') as f:
     json.dump(orgs, f, indent=4)

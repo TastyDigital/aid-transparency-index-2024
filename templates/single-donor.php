@@ -15,7 +15,7 @@
 			//echo '<pre>'.print_r($json,true).'</pre>';
 			if(!empty($json[$machinecode])){
 				$donorData = $json[$machinecode];
-				$donorData['position'] = $donorData['rank'].'/'.count($json);
+				$donorData['position'] = $donorData['rank_combined'].'/'.count($json);
 				return $donorData;
 			}
 		}
@@ -113,8 +113,8 @@
 				foreach ($donorData['history'] as $record) {
 					if($record['score'] !== null && $record['score'] !== ''){
 						$year = $record['year'];
-						// Round the score to 2 decimal places
-						$score = round($record['score'], 2);
+						// Round the score to 1 decimal places
+						$score = round($record['score'], 1);
 						$performance_group = ucfirst(strtolower($record['performance_group']));
 						$performance[$year] = [$score, $colours[$performance_group][0]];
 						
@@ -124,7 +124,7 @@
 					}
 				}
 				$perf_group = ucfirst(strtolower($donorData['performance_group']));
-				$performance[2024] = [ round($donorData['score'],2), $colours[$perf_group][0] ];
+				$performance[2024] = [ $donorData['score_rounded'], $colours[$perf_group][0] ];
 				// Sort the array by keys (years) in ascending order
 				ksort($performance);
 			}
@@ -340,7 +340,7 @@
 				$indicators[$row] .= '<h4>'.$inTitle.'</h4>';
 
 				if($inData){
-					$indicators[$row] .= '<span class="weighted-score">'.atiTranslate('Score', $lang).': '.round($inData['score']*$inData['weight'], 2).'</span>';
+					$indicators[$row] .= '<span class="weighted-score">'.atiTranslate('Score', $lang).': '.round($inData['score']*$inData['weight'], 1).'</span>';
 				}
 
 				$inID = str_replace(array('/','(',')'), '', $inString);

@@ -39,7 +39,7 @@ const DonorTable = (props) => {
     const renderScore = (donor) => {
         const bgcolor = getColor(donor.performance_group, props.components[3])
         const barColor = getColor(donor.performance_group, props.components[0])
-        return <div className='score-bar' style={{backgroundColor:bgcolor}} data-tip={donor.score.toFixed(1) + ' / 100'} data-for='tabledata'>
+        return <div className='score-bar' style={{backgroundColor:bgcolor}} data-tip={donor.score_rounded + ' / 100'} data-for='tabledata'>
             <div className='fill' style={{width:donor.score+'%',backgroundColor:barColor}}/>
         </div>
     }
@@ -121,12 +121,9 @@ const DonorTable = (props) => {
             </thead>
             <tbody>
             {items.map((item) => {
-                const rank = rankCounter === item.score.toFixed(1) ? equalRank : item.rank;
-                equalRank = rank;
-                rankCounter = item.score.toFixed(1);
                 return (
                     <tr key={item.id} className={getRowClass(item.link)} onClick={() => getRowLink(item.link)}>
-                        <td className="centered">{rank}</td>
+                        <td className="centered">{item.rank_combined}</td>
                         <td>{renderTitle(item)}</td>
                         <td className='score-cell'>{renderScore(item)}</td>
                         {props.components.slice(0).reverse().map((component, index) => (
