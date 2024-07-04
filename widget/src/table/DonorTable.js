@@ -43,6 +43,8 @@ const DonorTable = (props) => {
             <div className='fill' style={{width:donor.score+'%',backgroundColor:barColor}}/>
         </div>
     }
+    let rankCounter = 0;
+    let equalRank = 0;
     //console.log('props.data[0].link',props.data[44]['link'])
     return (
         <>
@@ -119,9 +121,12 @@ const DonorTable = (props) => {
             </thead>
             <tbody>
             {items.map((item) => {
+                const rank = rankCounter === item.score.toFixed(1) ? equalRank : item.rank;
+                equalRank = rank;
+                rankCounter = item.score.toFixed(1);
                 return (
                     <tr key={item.id} className={getRowClass(item.link)} onClick={() => getRowLink(item.link)}>
-                        <td className="centered">{item.rank}</td>
+                        <td className="centered">{rank}</td>
                         <td>{renderTitle(item)}</td>
                         <td className='score-cell'>{renderScore(item)}</td>
                         {props.components.slice(0).reverse().map((component, index) => (
