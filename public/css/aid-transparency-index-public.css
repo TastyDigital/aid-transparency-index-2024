@@ -54,6 +54,9 @@ body.post-type-archive-donor_2024 {
                 color: var(--2024-dark-grey);
             }
         }
+        .content-sidebar-wrap {
+            overflow: hidden;
+        }
     }
 } 
 
