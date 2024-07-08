@@ -7,7 +7,7 @@ from os import makedirs
 import re
 import shutil
 
-import requests
+# import requests
 
 
 cats = [
@@ -63,6 +63,7 @@ orgs = {slugify(x['organisation_name_code']): {
     'name': x['organisation_name_code'].replace(', ', '-'),
     'display_name': x['organisation_name_short'].replace(', ', '-'),
     'components': OrderedDict(),
+    'slug': slugify(x['organisation_name_code']),
 } for x in results}
 
 with open(join(rootpath, '_data', 'past-results_2024.csv')) as f:
@@ -166,15 +167,37 @@ for idx, org in enumerate(orgs.values()):
     if org['score_rounded'] == prev_score_rounded:
         org['rank_combined'] = prev_rank_combined
     else:
-        org['rank_combined'] = idx + 1
+        org['rank_combined'] = str(idx + 1)
     prev_score_rounded = org['score_rounded']
     prev_rank_combined = org['rank_combined']
 
 # for idx, org in enumerate(orgs.values()):
 #     org['rank'] = idx + 1
 
+# Convert orgs.values() to a list to access elements by index
+orgs_list = list(orgs.values())
+
+for i in range(len(orgs_list) - 1):  # Iterate through orgs, stopping at the second-to-last item
+    current_org = orgs_list[i]
+    next_org = orgs_list[i + 1]
+    
+    # Check if the current org's score_rounded is equal to the next org's score_rounded
+    if current_org['score_rounded'] == next_org['score_rounded']:
+        # Prepend '=' to rank_combined for both organizations if their scores are equal
+        current_org['rank_combined'] = "=" + current_org['rank_combined']
+        next_org['rank_combined'] = "=" + next_org['rank_combined']
+
+# Assuming orgs_list is already populated and modified as per your requirements
+# Initialize an empty dictionary for the restructured orgs
+restructured_orgs = {}
+
+# Iterate over each item in orgs_list
+for org in orgs_list:
+    # Use the 'slug' field as the key and the org itself as the value
+    restructured_orgs[org['slug']] = org
+
 with open(join(rootpath, '_data', 'results_2024.json'), 'w') as f:
-    json.dump(orgs, f, indent=4)
+    json.dump(restructured_orgs, f, indent=4)
 
 # spreadsheet_url = 'https://docs.google.com/spreadsheets/' + \
 #                   'd/1LJR7yznASN0VJ4qhnkWFSltDFobN8X4N0mQBiNDOThg/' + \

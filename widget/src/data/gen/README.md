@@ -7,6 +7,6 @@
 
    ```shell
    $ # generate templates and `results.json`
-   $ python gen/data-gen.py
+   $ python3 gen/data-gen.py
    $
    ```
