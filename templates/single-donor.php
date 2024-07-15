@@ -103,7 +103,8 @@
 		$donorData = get_aid_donor_data();
 		$colours = getColours();
 		$donorColours = $colours[$donorData['performance_group']];
-
+		$graph = '';
+		
 		if(!empty($donorData)){
 
 			// first we’ll check for historic data
