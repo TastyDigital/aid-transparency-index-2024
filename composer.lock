@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "997f18c8b496d29976d3f75e1b5efa74",
+    "content-hash": "e334397ba4e13de5fc2713643e0ca39b",
     "packages": [
         {
             "name": "jjgrainger/posttypes",
@@ -147,16 +147,16 @@
         },
         {
             "name": "mikehaertl/phpwkhtmltopdf",
-            "version": "dev-master",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mikehaertl/phpwkhtmltopdf.git",
-                "reference": "3f9c96656259712324eda99978ccd90c79227203"
+                "reference": "17ee71341591415d942774eda2c98d8ba7ea9e90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikehaertl/phpwkhtmltopdf/zipball/3f9c96656259712324eda99978ccd90c79227203",
-                "reference": "3f9c96656259712324eda99978ccd90c79227203",
+                "url": "https://api.github.com/repos/mikehaertl/phpwkhtmltopdf/zipball/17ee71341591415d942774eda2c98d8ba7ea9e90",
+                "reference": "17ee71341591415d942774eda2c98d8ba7ea9e90",
                 "shasum": ""
             },
             "require": {
@@ -167,7 +167,6 @@
             "require-dev": {
                 "phpunit/phpunit": ">4.0 <9.4"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -193,9 +192,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mikehaertl/phpwkhtmltopdf/issues",
-                "source": "https://github.com/mikehaertl/phpwkhtmltopdf/tree/master"
+                "source": "https://github.com/mikehaertl/phpwkhtmltopdf/tree/2.5.0"
             },
-            "time": "2021-03-25T07:32:07+00:00"
+            "time": "2021-03-01T19:41:06+00:00"
         }
     ],
     "packages-dev": [],
