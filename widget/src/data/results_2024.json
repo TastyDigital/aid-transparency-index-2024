@@ -127,7 +127,7 @@
             },
             "Project attributes": {
                 "weighted_score": 19.999333335,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.99666667,
@@ -180,13 +180,6 @@
                     },
                     "Location": {
                         "score": 99.99666667,
-                        "weight": 0.035,
-                        "format": "IATI",
-                        "sources": [],
-                        "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
                         "weight": 0.035,
                         "format": "IATI",
                         "sources": [],
@@ -460,7 +453,7 @@
             },
             "Project attributes": {
                 "weighted_score": 19.913795344,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.99666667,
@@ -512,13 +505,6 @@
                         "status": ""
                     },
                     "Location": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "IATI",
-                        "sources": [],
-                        "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
                         "score": 98.5832391,
                         "weight": 0.035,
                         "format": "IATI",
@@ -813,7 +799,7 @@
             },
             "Project attributes": {
                 "weighted_score": 19.506,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 97.53,
@@ -866,13 +852,6 @@
                     },
                     "Location": {
                         "score": 97.53,
-                        "weight": 0.035,
-                        "format": "IATI",
-                        "sources": [],
-                        "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
                         "weight": 0.035,
                         "format": "IATI",
                         "sources": [],
@@ -1173,7 +1152,7 @@
             },
             "Project attributes": {
                 "weighted_score": 19.639726718000002,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.97403711,
@@ -1226,13 +1205,6 @@
                     },
                     "Location": {
                         "score": 99.17811278,
-                        "weight": 0.035,
-                        "format": "IATI",
-                        "sources": [],
-                        "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
                         "weight": 0.035,
                         "format": "IATI",
                         "sources": [],
@@ -1524,7 +1496,7 @@
             },
             "Project attributes": {
                 "weighted_score": 19.999333335,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.99666667,
@@ -1581,13 +1553,6 @@
                         "format": "IATI",
                         "sources": [],
                         "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
                     },
                     "Conditions": {
                         "score": 99.99666667,
@@ -1881,7 +1846,7 @@
             },
             "Project attributes": {
                 "weighted_score": 19.123017037,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.86553048,
@@ -1934,13 +1899,6 @@
                     },
                     "Location": {
                         "score": 93.20551096,
-                        "weight": 0.035,
-                        "format": "IATI",
-                        "sources": [],
-                        "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
                         "weight": 0.035,
                         "format": "IATI",
                         "sources": [],
@@ -2234,7 +2192,7 @@
             },
             "Project attributes": {
                 "weighted_score": 17.683841974,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.99666667,
@@ -2291,13 +2249,6 @@
                         "format": "IATI",
                         "sources": [],
                         "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
                     },
                     "Conditions": {
                         "score": 99.74178137,
@@ -2567,7 +2518,7 @@
             },
             "Project attributes": {
                 "weighted_score": 17.999333335,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.99666667,
@@ -2622,13 +2573,6 @@
                     },
                     "Location": {
                         "score": 99.99666667,
-                        "weight": 0.035,
-                        "format": "IATI",
-                        "sources": [],
-                        "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
                         "weight": 0.035,
                         "format": "IATI",
                         "sources": [],
@@ -2924,7 +2868,7 @@
             },
             "Project attributes": {
                 "weighted_score": 15.329731453999997,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.99666667,
@@ -2977,13 +2921,6 @@
                     },
                     "Location": {
                         "score": 66.66333333,
-                        "weight": 0.035,
-                        "format": "IATI",
-                        "sources": [],
-                        "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
                         "weight": 0.035,
                         "format": "IATI",
                         "sources": [],
@@ -3248,7 +3185,7 @@
             },
             "Project attributes": {
                 "weighted_score": 14.12931618,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.99392454,
@@ -3301,13 +3238,6 @@
                     },
                     "Location": {
                         "score": 66.66333333,
-                        "weight": 0.035,
-                        "format": "IATI",
-                        "sources": [],
-                        "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
                         "weight": 0.035,
                         "format": "IATI",
                         "sources": [],
@@ -3608,7 +3538,7 @@
             },
             "Project attributes": {
                 "weighted_score": 18.369708879,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.99666667,
@@ -3665,13 +3595,6 @@
                         "format": "IATI",
                         "sources": [],
                         "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
                     },
                     "Conditions": {
                         "score": 89.90894737,
@@ -3964,7 +3887,7 @@
             },
             "Project attributes": {
                 "weighted_score": 19.847325164,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.99666667,
@@ -4021,13 +3944,6 @@
                         "format": "IATI",
                         "sources": [],
                         "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
                     },
                     "Conditions": {
                         "score": 95.75322725,
@@ -4321,7 +4237,7 @@
             },
             "Project attributes": {
                 "weighted_score": 16.266116668,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.99666667,
@@ -4374,13 +4290,6 @@
                     },
                     "Location": {
                         "score": 99.99666667,
-                        "weight": 0.035,
-                        "format": "IATI",
-                        "sources": [],
-                        "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
                         "weight": 0.035,
                         "format": "IATI",
                         "sources": [],
@@ -4649,7 +4558,7 @@
             },
             "Project attributes": {
                 "weighted_score": 16.18769625,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.9035568,
@@ -4702,13 +4611,6 @@
                     },
                     "Location": {
                         "score": 99.99666667,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
                         "weight": 0.035,
                         "format": "",
                         "sources": [],
@@ -5012,7 +4914,7 @@
             },
             "Project attributes": {
                 "weighted_score": 13.498135573999999,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.94951909,
@@ -5069,13 +4971,6 @@
                         "format": "Website",
                         "sources": [],
                         "status": "Sometimes"
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
                     },
                     "Conditions": {
                         "score": 99.99666667,
@@ -5374,7 +5269,7 @@
             },
             "Project attributes": {
                 "weighted_score": 14.366523928,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.84974911,
@@ -5431,13 +5326,6 @@
                         "format": "Website",
                         "sources": [],
                         "status": "Sometimes"
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
                     },
                     "Conditions": {
                         "score": 43.38991013,
@@ -5737,7 +5625,7 @@
             },
             "Project attributes": {
                 "weighted_score": 19.462690129000002,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.99666667,
@@ -5794,13 +5682,6 @@
                         "format": "IATI",
                         "sources": [],
                         "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
                     },
                     "Conditions": {
                         "score": 99.99666667,
@@ -6105,7 +5986,7 @@
             },
             "Project attributes": {
                 "weighted_score": 14.182870644000001,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.99666667,
@@ -6162,13 +6043,6 @@
                         "format": "IATI",
                         "sources": [],
                         "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
                     },
                     "Conditions": {
                         "score": 0.0,
@@ -6437,7 +6311,7 @@
             },
             "Project attributes": {
                 "weighted_score": 15.854242226,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.99666667,
@@ -6494,13 +6368,6 @@
                         "format": "",
                         "sources": [],
                         "status": "Not Published"
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "IATI",
-                        "sources": [],
-                        "status": ""
                     },
                     "Conditions": {
                         "score": 94.52402985,
@@ -6801,7 +6668,7 @@
             },
             "Project attributes": {
                 "weighted_score": 16.999433335,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.99666667,
@@ -6858,13 +6725,6 @@
                         "format": "IATI",
                         "sources": [],
                         "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
                     },
                     "Conditions": {
                         "score": 99.99666667,
@@ -7141,7 +7001,7 @@
             },
             "Project attributes": {
                 "weighted_score": 15.662626444,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.99666667,
@@ -7198,13 +7058,6 @@
                         "format": "Website",
                         "sources": [],
                         "status": "Sometimes"
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "IATI",
-                        "sources": [],
-                        "status": ""
                     },
                     "Conditions": {
                         "score": 77.46838334,
@@ -7505,7 +7358,7 @@
             },
             "Project attributes": {
                 "weighted_score": 17.913032826,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 94.99666667,
@@ -7558,13 +7411,6 @@
                     },
                     "Location": {
                         "score": 94.99666667,
-                        "weight": 0.035,
-                        "format": "IATI",
-                        "sources": [],
-                        "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
                         "weight": 0.035,
                         "format": "IATI",
                         "sources": [],
@@ -7868,7 +7714,7 @@
             },
             "Project attributes": {
                 "weighted_score": 16.376158478,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.99666667,
@@ -7925,13 +7771,6 @@
                         "format": "IATI",
                         "sources": [],
                         "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
                     },
                     "Conditions": {
                         "score": 0.0,
@@ -8196,7 +8035,7 @@
             },
             "Project attributes": {
                 "weighted_score": 16.43722778,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.99666667,
@@ -8253,13 +8092,6 @@
                         "format": "IATI",
                         "sources": [],
                         "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
                     },
                     "Conditions": {
                         "score": 0.0,
@@ -8533,7 +8365,7 @@
             },
             "Project attributes": {
                 "weighted_score": 13.938966482999998,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.34671905,
@@ -8590,13 +8422,6 @@
                         "format": "IATI",
                         "sources": [],
                         "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
                     },
                     "Conditions": {
                         "score": 0.0,
@@ -8899,7 +8724,7 @@
             },
             "Project attributes": {
                 "weighted_score": 15.332783335999999,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.99666667,
@@ -8951,13 +8776,6 @@
                         "status": ""
                     },
                     "Location": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "IATI",
-                        "sources": [],
-                        "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
                         "score": 66.66333333,
                         "weight": 0.035,
                         "format": "IATI",
@@ -9256,7 +9074,7 @@
             },
             "Project attributes": {
                 "weighted_score": 12.144128898000002,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 50.0,
@@ -9311,13 +9129,6 @@
                     },
                     "Location": {
                         "score": 40.82985735,
-                        "weight": 0.035,
-                        "format": "IATI",
-                        "sources": [],
-                        "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
                         "weight": 0.035,
                         "format": "IATI",
                         "sources": [],
@@ -9620,7 +9431,7 @@
             },
             "Project attributes": {
                 "weighted_score": 12.249616668999998,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.99666667,
@@ -9681,13 +9492,6 @@
                             "https://data.unhcr.org/en/country/ssd"
                         ],
                         "status": "Always"
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
                     },
                     "Conditions": {
                         "score": 0.0,
@@ -9955,7 +9759,7 @@
             },
             "Project attributes": {
                 "weighted_score": 14.470107123999998,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.96524976,
@@ -10008,13 +9812,6 @@
                     },
                     "Location": {
                         "score": 50.84412429,
-                        "weight": 0.035,
-                        "format": "IATI",
-                        "sources": [],
-                        "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
                         "weight": 0.035,
                         "format": "IATI",
                         "sources": [],
@@ -10315,7 +10112,7 @@
             },
             "Project attributes": {
                 "weighted_score": 14.109245633999997,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.99666667,
@@ -10368,13 +10165,6 @@
                     },
                     "Location": {
                         "score": 35.14069959,
-                        "weight": 0.035,
-                        "format": "IATI",
-                        "sources": [],
-                        "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
                         "weight": 0.035,
                         "format": "IATI",
                         "sources": [],
@@ -10665,7 +10455,7 @@
             },
             "Project attributes": {
                 "weighted_score": 12.609742335,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 84.98097205,
@@ -10718,13 +10508,6 @@
                     },
                     "Location": {
                         "score": 52.00896799,
-                        "weight": 0.035,
-                        "format": "IATI",
-                        "sources": [],
-                        "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
                         "weight": 0.035,
                         "format": "IATI",
                         "sources": [],
@@ -11022,7 +10805,7 @@
             },
             "Project attributes": {
                 "weighted_score": 15.651056165,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 50.0,
@@ -11077,13 +10860,6 @@
                     },
                     "Location": {
                         "score": 66.66333333,
-                        "weight": 0.035,
-                        "format": "IATI",
-                        "sources": [],
-                        "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
                         "weight": 0.035,
                         "format": "IATI",
                         "sources": [],
@@ -11377,7 +11153,7 @@
             },
             "Project attributes": {
                 "weighted_score": 13.651542683999999,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.93311696,
@@ -11430,13 +11206,6 @@
                     },
                     "Location": {
                         "score": 42.68469183,
-                        "weight": 0.035,
-                        "format": "IATI",
-                        "sources": [],
-                        "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
                         "weight": 0.035,
                         "format": "IATI",
                         "sources": [],
@@ -11741,7 +11510,7 @@
             },
             "Project attributes": {
                 "weighted_score": 11.598683664,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 96.53175439,
@@ -11793,13 +11562,6 @@
                         "status": ""
                     },
                     "Location": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
-                    },
-                    "Location (with activity-scope exclusion)": {
                         "score": 0.0,
                         "weight": 0.035,
                         "format": "",
@@ -12079,7 +11841,7 @@
             },
             "Project attributes": {
                 "weighted_score": 14.417558629,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 97.17743724,
@@ -12132,13 +11894,6 @@
                     },
                     "Location": {
                         "score": 52.2508682,
-                        "weight": 0.035,
-                        "format": "IATI",
-                        "sources": [],
-                        "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
                         "weight": 0.035,
                         "format": "IATI",
                         "sources": [],
@@ -12445,7 +12200,7 @@
             },
             "Project attributes": {
                 "weighted_score": 11.527499628999998,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.81044693,
@@ -12502,13 +12257,6 @@
                         "format": "Website",
                         "sources": [],
                         "status": "Sometimes"
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
                     },
                     "Conditions": {
                         "score": 0.0,
@@ -12780,7 +12528,7 @@
             },
             "Project attributes": {
                 "weighted_score": 10.939961722,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 74.99666667,
@@ -12835,13 +12583,6 @@
                     },
                     "Location": {
                         "score": 47.67178744,
-                        "weight": 0.035,
-                        "format": "IATI",
-                        "sources": [],
-                        "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
                         "weight": 0.035,
                         "format": "IATI",
                         "sources": [],
@@ -13146,7 +12887,7 @@
             },
             "Project attributes": {
                 "weighted_score": 12.89734065,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 96.30399615,
@@ -13205,13 +12946,6 @@
                             "https://um.dk/en/-/media/websites/umen/danida/about-danida/danida-transparency/council-for-development-policy/climate-change-adaption-and-stability-in-fragile-border-areas-of-mali.ashx"
                         ],
                         "status": "Always"
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
                     },
                     "Conditions": {
                         "score": 0.0,
@@ -13516,7 +13250,7 @@
             },
             "Project attributes": {
                 "weighted_score": 11.917685589000001,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 94.67826782,
@@ -13568,13 +13302,6 @@
                         "status": ""
                     },
                     "Location": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
-                    },
-                    "Location (with activity-scope exclusion)": {
                         "score": 0.0,
                         "weight": 0.035,
                         "format": "",
@@ -13871,7 +13598,7 @@
             },
             "Project attributes": {
                 "weighted_score": 9.484462376,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 84.99666667,
@@ -13925,13 +13652,6 @@
                         "status": ""
                     },
                     "Location": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
-                    },
-                    "Location (with activity-scope exclusion)": {
                         "score": 0.0,
                         "weight": 0.035,
                         "format": "",
@@ -14238,7 +13958,7 @@
             },
             "Project attributes": {
                 "weighted_score": 11.147861758999998,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.38316973,
@@ -14295,13 +14015,6 @@
                         "format": "Website",
                         "sources": [],
                         "status": "Sometimes"
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
                     },
                     "Conditions": {
                         "score": 0.0,
@@ -14568,7 +14281,7 @@
             },
             "Project attributes": {
                 "weighted_score": 8.335243526,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 84.24536167,
@@ -14620,13 +14333,6 @@
                         "status": ""
                     },
                     "Location": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
-                    },
-                    "Location (with activity-scope exclusion)": {
                         "score": 0.0,
                         "weight": 0.035,
                         "format": "",
@@ -14927,7 +14633,7 @@
             },
             "Project attributes": {
                 "weighted_score": 9.65076401,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 62.29599203,
@@ -14980,13 +14686,6 @@
                     },
                     "Location": {
                         "score": 33.51149197,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
                         "weight": 0.035,
                         "format": "",
                         "sources": [],
@@ -15283,7 +14982,7 @@
             },
             "Project attributes": {
                 "weighted_score": 12.122373687,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 94.99666667,
@@ -15335,13 +15034,6 @@
                         "status": ""
                     },
                     "Location": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
-                    },
-                    "Location (with activity-scope exclusion)": {
                         "score": 0.0,
                         "weight": 0.035,
                         "format": "",
@@ -15632,7 +15324,7 @@
             },
             "Project attributes": {
                 "weighted_score": 12.973842578,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 99.99666667,
@@ -15693,13 +15385,6 @@
                             "https://data.ksrelief.org/Projects/ProjectDetails/8229"
                         ],
                         "status": "Always"
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
                     },
                     "Conditions": {
                         "score": 0.0,
@@ -15975,7 +15660,7 @@
             },
             "Project attributes": {
                 "weighted_score": 8.443673192,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 0.0,
@@ -16029,13 +15714,6 @@
                         "status": ""
                     },
                     "Location": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
-                    },
-                    "Location (with activity-scope exclusion)": {
                         "score": 0.0,
                         "weight": 0.035,
                         "format": "",
@@ -16300,7 +15978,7 @@
             },
             "Project attributes": {
                 "weighted_score": 9.468482404,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 64.96128492,
@@ -16357,13 +16035,6 @@
                         "format": "IATI",
                         "sources": [],
                         "status": ""
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
                     },
                     "Conditions": {
                         "score": 0.0,
@@ -16628,7 +16299,7 @@
             },
             "Project attributes": {
                 "weighted_score": 1.16655,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 33.33,
@@ -16691,13 +16362,6 @@
                         "format": "Website",
                         "sources": [],
                         "status": "Sometimes"
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
                     },
                     "Conditions": {
                         "score": 0.0,
@@ -16995,7 +16659,7 @@
             },
             "Project attributes": {
                 "weighted_score": 0.0,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 0.0,
@@ -17047,13 +16711,6 @@
                         "status": "Not Published"
                     },
                     "Location": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
-                    },
-                    "Location (with activity-scope exclusion)": {
                         "score": 0.0,
                         "weight": 0.035,
                         "format": "",
@@ -17353,7 +17010,7 @@
             },
             "Project attributes": {
                 "weighted_score": 0.0,
-                "out_of": 24,
+                "out_of": 20,
                 "indicators": {
                     "Title": {
                         "score": 0.0,
@@ -17410,13 +17067,6 @@
                         "format": "Website",
                         "sources": [],
                         "status": "Sometimes"
-                    },
-                    "Location (with activity-scope exclusion)": {
-                        "score": 0.0,
-                        "weight": 0.035,
-                        "format": "",
-                        "sources": [],
-                        "status": "Not Published"
                     },
                     "Conditions": {
                         "score": 0.0,
