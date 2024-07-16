@@ -55,7 +55,7 @@ with open(join(rootpath, '_data', 'results_2024.csv')) as f:
 
 results = sorted(
     results,
-    key=lambda x: (x['organisation_code'], x['indicator_order'])
+    key=lambda x: (x['organisation_name_code'], x['indicator_order'])
 )
 
 orgs = {slugify(x['organisation_name_code']): {
