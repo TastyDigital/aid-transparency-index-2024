@@ -9,7 +9,7 @@
     "@babel/core": "^7.24.5",
     "@babel/plugin-syntax-jsx": "^7.24.1",
     "@babel/preset-env": "^7.24.5",
-    "@wordpress/scripts": "^27.8.0",
+    "@wordpress/scripts": "^31.4.0",
     "ase-util": "^1.0.3",
     "babel-minify": "^0.5.2",
     "postcss": "^8.4.38",
@@ -62,5 +62,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "packageManager": "yarn@4.12.0"
 }
