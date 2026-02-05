@@ -3,7 +3,7 @@
         'name' => 'tastydigital/aid-transparency-index-2024',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '0bccd5756713b2707916c08708f4a57b13c54873',
+        'reference' => '4c46e7df73df751c7d8fbbcba333905b4a95821d',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'jjgrainger/posttypes' => array(
-            'pretty_version' => 'v2.2',
-            'version' => '2.2.0.0',
-            'reference' => '20f5a203316783a71ddfcd047ffebf1dc2bacb51',
+            'pretty_version' => 'v2.2.2',
+            'version' => '2.2.2.0',
+            'reference' => 'f5d5812992fe204409d585d936c7c110b8d23773',
             'type' => 'library',
             'install_path' => __DIR__ . '/../jjgrainger/posttypes',
             'aliases' => array(),
@@ -29,9 +29,9 @@
             'dev_requirement' => false,
         ),
         'mikehaertl/php-tmpfile' => array(
-            'pretty_version' => '1.2.1',
-            'version' => '1.2.1.0',
-            'reference' => '70a5b70b17bc0d9666388e6a551ecc93d0b40a10',
+            'pretty_version' => '1.3.0',
+            'version' => '1.3.0.0',
+            'reference' => 'a5392bed91f67e2849a7cb24075d346468e1b1a8',
             'type' => 'library',
             'install_path' => __DIR__ . '/../mikehaertl/php-tmpfile',
             'aliases' => array(),
@@ -49,7 +49,7 @@
         'tastydigital/aid-transparency-index-2024' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '0bccd5756713b2707916c08708f4a57b13c54873',
+            'reference' => '4c46e7df73df751c7d8fbbcba333905b4a95821d',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

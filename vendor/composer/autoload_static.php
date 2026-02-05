@@ -7,32 +7,32 @@ namespace Composer\Autoload;
 class ComposerStaticInit857bceb09bf95ce421298e06868719d0
 {
     public static $prefixLengthsPsr4 = array (
-        'm' => 
+        'm' =>
         array (
             'mikehaertl\\wkhtmlto\\' => 20,
             'mikehaertl\\tmp\\' => 15,
             'mikehaertl\\shellcommand\\' => 24,
         ),
-        'P' => 
+        'P' =>
         array (
             'PostTypes\\' => 10,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'mikehaertl\\wkhtmlto\\' => 
+        'mikehaertl\\wkhtmlto\\' =>
         array (
             0 => __DIR__ . '/..' . '/mikehaertl/phpwkhtmltopdf/src',
         ),
-        'mikehaertl\\tmp\\' => 
+        'mikehaertl\\tmp\\' =>
         array (
             0 => __DIR__ . '/..' . '/mikehaertl/php-tmpfile/src',
         ),
-        'mikehaertl\\shellcommand\\' => 
+        'mikehaertl\\shellcommand\\' =>
         array (
             0 => __DIR__ . '/..' . '/mikehaertl/php-shellcommand/src',
         ),
-        'PostTypes\\' => 
+        'PostTypes\\' =>
         array (
             0 => __DIR__ . '/..' . '/jjgrainger/posttypes/src',
         ),

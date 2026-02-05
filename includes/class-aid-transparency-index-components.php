@@ -23,7 +23,7 @@
 
 
 
-        include_once 'components-and-indicators.php'; // imports variable $components_and_indicators
+        include_once __DIR__ . '/components-and-indicators.php'; // imports variable $components_and_indicators
 
 		/**
 		 * Register main donor options args

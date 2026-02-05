@@ -22,9 +22,9 @@
 	add_image_size( 'graph-thumb', 70, 70, TRUE );
     if(!defined('ATI_LANGUAGES')) {
         define( 'ATI_LANGUAGES',  array(
-            'en' => __( 'English', 'aid-transparency-index-2024'  ),
-            'fr'   => __( 'French', 'aid-transparency-index-2024'  ),
-            'es'   => __( 'Spanish', 'aid-transparency-index-2024'  ),
+            'en' => 'English',
+            'fr'   =>  'French',
+            'es'   => 'Spanish',
         ));
     }
 
@@ -57,10 +57,10 @@
 	];
 
 	$donor_labels_2024 = [
-		'featured_image' => __( 'Graph Image', 'textdomain' ),
-		'set_featured_image' => __( 'Set graph image', 'textdomain' ),
-		'remove_featured_image' => _x( 'Remove graph image', 'textdomain' ),
-		'use_featured_image' => _x( 'Use as graph image', 'textdomain' )
+		'featured_image' => 'Graph Image',
+		'set_featured_image' => 'Set graph image',
+		'remove_featured_image' =>  'Remove graph image',
+		'use_featured_image' =>  'Use as graph image',
 	];
 
 // Create a books Post Type
@@ -71,11 +71,11 @@
 // define the columns to appear on the admin edit screen
 	$donors_2024->columns()->set([
 		'cb' => '<input type="checkbox" />',
-		'title' => __('Full name on Donor Profile', 'aid-transparency-index-2024'),
-		'donor_code' => __("Donor code", 'aid-transparency-index-2024'),
-		'language' => __('Language', 'aid-transparency-index-2024' ),
-		'country' => __('Country', 'aid-transparency-index-2024'),
-		'icon' => __('Graph', 'aid-transparency-index-2024')
+		'title' => 'Full name on Donor Profile',
+		'donor_code' => "Donor code",
+		'language' => 'Language',
+		'country' => 'Country',
+		'icon' => 'Graph',
 	]);
 
 // Hide the date and author columns
